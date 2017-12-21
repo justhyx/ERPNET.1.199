@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="alertksj" xml:space="preserve">
+    <value>Data is empty, please try again after confirmation</value>
+  </data>
+  <data name="alertsjcw" xml:space="preserve">
+    <value>Input date format error</value>
+  </data>
+  <data name="alerttx" xml:space="preserve">
+    <value>Please complete the information</value>
+  </data>
+  <data name="alertWxqd" xml:space="preserve">
+    <value>Inventory sheet has been started, you can not start again</value>
+  </data>
+  <data name="alertxzexcel" xml:space="preserve">
+    <value>Upload file must be an Excel file</value>
+  </data>
+  <data name="alertxzwj" xml:space="preserve">
+    <value>Please select Upload file</value>
+  </data>
+  <data name="alterDoubbleConfirm" xml:space="preserve">
+    <value>Don't need to Confirm again</value>
+  </data>
+  <data name="alterfiald" xml:space="preserve">
+    <value>Operation failed</value>
+  </data>
+  <data name="alterOk" xml:space="preserve">
+    <value>Operation is successful</value>
+  </data>
+  <data name="alterReConfrim" xml:space="preserve">
+    <value>Don't need to ReConfrim</value>
+  </data>
+  <data name="alterwxz" xml:space="preserve">
+    <value>No Rows Selected</value>
+  </data>
+  <data name="bc" xml:space="preserve">
+    <value>บันทึก</value>
+  </data>
+  <data name="bf" xml:space="preserve">
+    <value>Part No.</value>
+  </data>
+  <data name="bh" xml:space="preserve">
+    <value>NO.</value>
+  </data>
+  <data name="bhzsh" xml:space="preserve">
+    <value>Goods preparation instruction No.</value>
+  </data>
+  <data name="bhzshsjmx" xml:space="preserve">
+    <value>Data details of goods preparation instruction No.</value>
+  </data>
+  <data name="blzsh" xml:space="preserve">
+    <value>Material preparation instruction No.</value>
+  </data>
+  <data name="bpmc" xml:space="preserve">
+    <value>Part Name</value>
+  </data>
+  <data name="bpmc1" xml:space="preserve">
+    <value>Part Name</value>
+  </data>
+  <data name="bpzl" xml:space="preserve">
+    <value>Part weight</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="bz" xml:space="preserve">
+    <value>Remark</value>
+  </data>
+  <data name="bz1" xml:space="preserve">
+    <value>Other page</value>
+  </data>
+  <data name="cabs" xml:space="preserve">
+    <value>Material marking</value>
+  </data>
+  <data name="caozuo" xml:space="preserve">
+    <value>Operation</value>
+  </data>
+  <data name="cdj" xml:space="preserve">
+    <value>Measuring tool</value>
+  </data>
+  <data name="cjr" xml:space="preserve">
+    <value>Creater</value>
+  </data>
+  <data name="cjrq" xml:space="preserve">
+    <value>Creation date</value>
+  </data>
+  <data name="ck" xml:space="preserve">
+    <value>View Details</value>
+  </data>
+  <data name="clck" xml:space="preserve">
+    <value>ตำแหน่งสต็อก</value>
+  </data>
+  <data name="clck1" xml:space="preserve">
+    <value>Material warehouse</value>
+  </data>
+  <data name="clgl" xml:space="preserve">
+    <value>Material management</value>
+  </data>
+  <data name="clgyssf" xml:space="preserve">
+    <value>Supplier's material color No.</value>
+  </data>
+  <data name="cljgxgxx" xml:space="preserve">
+    <value>Material price revise details</value>
+  </data>
+  <data name="clqy" xml:space="preserve">
+    <value>Handle area</value>
+  </data>
+  <data name="clxm" xml:space="preserve">
+    <value>Measuring items</value>
+  </data>
+  <data name="cr" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="crt" xml:space="preserve">
+    <value>Approval picture</value>
+  </data>
+  <data name="cs" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="cx" xml:space="preserve">
+    <value>Molding</value>
+  </data>
+  <data name="cy" xml:space="preserve">
+    <value>Diffrence</value>
+  </data>
+  <data name="cyhz" xml:space="preserve">
+    <value>Variance Summary</value>
+  </data>
+  <data name="cz" xml:space="preserve">
+    <value>Material</value>
+  </data>
+  <data name="cz1" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="czry" xml:space="preserve">
+    <value>Operator</value>
+  </data>
+  <data name="dc" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="dcpdp" xml:space="preserve">
+    <value>export</value>
+  </data>
+  <data name="dd" xml:space="preserve">
+    <value>Person in charge</value>
+  </data>
+  <data name="dh" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="dj" xml:space="preserve">
+    <value>Unit-Price</value>
+  </data>
+  <data name="duizhao" xml:space="preserve">
+    <value>Compare</value>
+  </data>
+  <data name="dw" xml:space="preserve">
+    <value>Unit</value>
+  </data>
+  <data name="dy" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="dypdp" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="dz" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="fcwc" xml:space="preserve">
+    <value>Material crush complete</value>
+  </data>
+  <data name="fh" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="fhsyy" xml:space="preserve">
+    <value>Back to previous page</value>
+  </data>
+  <data name="fs" xml:space="preserve">
+    <value>Reconfirm</value>
+  </data>
+  <data name="fs1" xml:space="preserve">
+    <value>Reconfirm</value>
+  </data>
+  <data name="fsdq" xml:space="preserve">
+    <value>Reconfirm the current page</value>
+  </data>
+  <data name="fsdq1" xml:space="preserve">
+    <value>Reconfirm the current page</value>
+  </data>
+  <data name="fslbl" xml:space="preserve">
+    <value>Regrind material ratio</value>
+  </data>
+  <data name="fsx" xml:space="preserve">
+    <value>Negative</value>
+  </data>
+  <data name="fx" xml:space="preserve">
+    <value>Issuance</value>
+  </data>
+  <data name="gcnjcggs" xml:space="preserve">
+    <value>Specification for inspection during production</value>
+  </data>
+  <data name="gcnjcggslb" xml:space="preserve">
+    <value>Specification list for inspection during production</value>
+  </data>
+  <data name="gcq" xml:space="preserve">
+    <value>Tolerance start</value>
+  </data>
+  <data name="gcz" xml:space="preserve">
+    <value>Tolerance stop</value>
+  </data>
+  <data name="gdnr" xml:space="preserve">
+    <value>Revised contents</value>
+  </data>
+  <data name="gdrq" xml:space="preserve">
+    <value>Revised date</value>
+  </data>
+  <data name="gg" xml:space="preserve">
+    <value>Specification</value>
+  </data>
+  <data name="ggsgl" xml:space="preserve">
+    <value>Supplier management</value>
+  </data>
+  <data name="gms" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="gx" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="gys" xml:space="preserve">
+    <value>Supplier</value>
+  </data>
+  <data name="gysbh" xml:space="preserve">
+    <value>Supplier No.</value>
+  </data>
+  <data name="gysjc" xml:space="preserve">
+    <value>Supplier abbreviation</value>
+  </data>
+  <data name="gysm" xml:space="preserve">
+    <value>Supplier name</value>
+  </data>
+  <data name="gysxxwh" xml:space="preserve">
+    <value>Supplier information maintenance</value>
+  </data>
+  <data name="gzsj" xml:space="preserve">
+    <value>Drying time</value>
+  </data>
+  <data name="gzwd" xml:space="preserve">
+    <value>Drying temperature</value>
+  </data>
+  <data name="hf" xml:space="preserve">
+    <value>Restore</value>
+  </data>
+  <data name="hj" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="hwh" xml:space="preserve">
+    <value>Goods allocation No.</value>
+  </data>
+  <data name="issccj" xml:space="preserve">
+    <value>Is Production Co.?</value>
+  </data>
+  <data name="jbbzyb" xml:space="preserve">
+    <value>Standard sample</value>
+  </data>
+  <data name="jbxd" xml:space="preserve">
+    <value>Limited sample</value>
+  </data>
+  <data name="jcpd" xml:space="preserve">
+    <value>Inspection frequentness</value>
+  </data>
+  <data name="jcxm" xml:space="preserve">
+    <value>Inspection items</value>
+  </data>
+  <data name="je" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="jh" xml:space="preserve">
+    <value>Marking</value>
+  </data>
+  <data name="jhsc" xml:space="preserve">
+    <value>Delivery uploading</value>
+  </data>
+  <data name="jssj" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="jx" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="jz" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="kh" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="kh1" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="ksfc" xml:space="preserve">
+    <value>Srart to crush</value>
+  </data>
+  <data name="kssj" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="lxr" xml:space="preserve">
+    <value>Contact person</value>
+  </data>
+  <data name="mc" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="mjbh" xml:space="preserve">
+    <value>Mold No.</value>
+  </data>
+  <data name="pch" xml:space="preserve">
+    <value>Lot No.</value>
+  </data>
+  <data name="pdbh" xml:space="preserve">
+    <value>Inventory sheet No.</value>
+  </data>
+  <data name="pdbh1" xml:space="preserve">
+    <value>Inventory sheet No.</value>
+  </data>
+  <data name="pdblr" xml:space="preserve">
+    <value>Inventory sheet input</value>
+  </data>
+  <data name="pdbqr" xml:space="preserve">
+    <value>Inventory sheet confirmation ( approval)</value>
+  </data>
+  <data name="pdbqr1" xml:space="preserve">
+    <value>Inventory sheet confirmation ( approval)</value>
+  </data>
+  <data name="pdbsh" xml:space="preserve">
+    <value>Inventory sheet approval</value>
+  </data>
+  <data name="pdbzdrq" xml:space="preserve">
+    <value>Inventory sheet create date</value>
+  </data>
+  <data name="pddh" xml:space="preserve">
+    <value>Inventory sheet No.</value>
+  </data>
+  <data name="pddh1" xml:space="preserve">
+    <value>Inventory sheet No.</value>
+  </data>
+  <data name="pdms" xml:space="preserve">
+    <value>Inventory pattern</value>
+  </data>
+  <data name="pdrq" xml:space="preserve">
+    <value>Inventory date</value>
+  </data>
+  <data name="pdrq1" xml:space="preserve">
+    <value>Inventory date</value>
+  </data>
+  <data name="pdsl" xml:space="preserve">
+    <value>Inventory Quantity</value>
+  </data>
+  <data name="pdsp" xml:space="preserve">
+    <value>Inventory goods</value>
+  </data>
+  <data name="plsc" xml:space="preserve">
+    <value>Batch upload</value>
+  </data>
+  <data name="pm" xml:space="preserve">
+    <value>Part name</value>
+  </data>
+  <data name="qd" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="qdpd" xml:space="preserve">
+    <value>Start taking inventory</value>
+  </data>
+  <data name="qr" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="qr1" xml:space="preserve">
+    <value>Confirmation</value>
+  </data>
+  <data name="qrdq" xml:space="preserve">
+    <value>Confirm the current page</value>
+  </data>
+  <data name="qrdq1" xml:space="preserve">
+    <value>Current page Confirmation</value>
+  </data>
+  <data name="qrsh" xml:space="preserve">
+    <value>Confirmation and approval</value>
+  </data>
+  <data name="qs" xml:space="preserve">
+    <value>Cavity</value>
+  </data>
+  <data name="qsrgysm" xml:space="preserve">
+    <value>Please input supplier name</value>
+  </data>
+  <data name="qx" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="qxz" xml:space="preserve">
+    <value>Please Select</value>
+  </data>
+  <data name="qy" xml:space="preserve">
+    <value>Zone</value>
+  </data>
+  <data name="rsl" xml:space="preserve">
+    <value>By colouring material</value>
+  </data>
+  <data name="rz" xml:space="preserve">
+    <value>Certificate</value>
+  </data>
+  <data name="sc" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="sc1" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="sccj" xml:space="preserve">
+    <value>Production Co.</value>
+  </data>
+  <data name="sch" xml:space="preserve">
+    <value>Delete rows</value>
+  </data>
+  <data name="sf" xml:space="preserve">
+    <value>Color No.</value>
+  </data>
+  <data name="sfgms" xml:space="preserve">
+    <value>Master batch supplier</value>
+  </data>
+  <data name="sfscpdb" xml:space="preserve">
+    <value>Delete the Inventory sheet ?</value>
+  </data>
+  <data name="sfxh" xml:space="preserve">
+    <value>Master batch type</value>
+  </data>
+  <data name="sh" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="sh1" xml:space="preserve">
+    <value>Approval</value>
+  </data>
+  <data name="shrq" xml:space="preserve">
+    <value>Delivery date</value>
+  </data>
+  <data name="shyj" xml:space="preserve">
+    <value>Approval opinions</value>
+  </data>
+  <data name="sjgl" xml:space="preserve">
+    <value>Data management</value>
+  </data>
+  <data name="sjsc" xml:space="preserve">
+    <value>Data uploading</value>
+  </data>
+  <data name="skzl" xml:space="preserve">
+    <value>Runner weight</value>
+  </data>
+  <data name="sp" xml:space="preserve">
+    <value>Goods</value>
+  </data>
+  <data name="spda" xml:space="preserve">
+    <value>Goods file</value>
+  </data>
+  <data name="spsx" xml:space="preserve">
+    <value>Goods property</value>
+  </data>
+  <data name="ss" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="sskc" xml:space="preserve">
+    <value>Real-time inventory</value>
+  </data>
+  <data name="sx" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="sy" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="szpfcshtglb" xml:space="preserve">
+    <value>Approvaled trial samples crushing list</value>
+  </data>
+  <data name="szpfslb" xml:space="preserve">
+    <value>Trial samples crushing list</value>
+  </data>
+  <data name="tj" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="tj1" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="tjcesj" xml:space="preserve">
+    <value>Add measuring data</value>
+  </data>
+  <data name="tjgys" xml:space="preserve">
+    <value>Add suppliers</value>
+  </data>
+  <data name="wck" xml:space="preserve">
+    <value>NIS</value>
+  </data>
+  <data name="wlcg" xml:space="preserve">
+    <value>Materials Purchase</value>
+  </data>
+  <data name="wlsx" xml:space="preserve">
+    <value>Material Properties</value>
+  </data>
+  <data name="wlyc" xml:space="preserve">
+    <value>Material Prediction</value>
+  </data>
+  <data name="xg" xml:space="preserve">
+    <value>Revise</value>
+  </data>
+  <data name="xh" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="xitem" xml:space="preserve">
+    <value>X-item</value>
+  </data>
+  <data name="xjju" xml:space="preserve">
+    <value>Measuring records</value>
+  </data>
+  <data name="xtsl" xml:space="preserve">
+    <value>Balance in system</value>
+  </data>
+  <data name="xx" xml:space="preserve">
+    <value>Display</value>
+  </data>
+  <data name="xz" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="xz1" xml:space="preserve">
+    <value>Select </value>
+  </data>
+  <data name="xzwj" xml:space="preserve">
+    <value>Select file</value>
+  </data>
+  <data name="y" xml:space="preserve">
+    <value>Have</value>
+  </data>
+  <data name="yl" xml:space="preserve">
+    <value>Preview</value>
+  </data>
+  <data name="ylbh" xml:space="preserve">
+    <value>Material No.</value>
+  </data>
+  <data name="ys" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="ys1" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="ysc" xml:space="preserve">
+    <value>Already deleted</value>
+  </data>
+  <data name="ysl" xml:space="preserve">
+    <value>By primary material</value>
+  </data>
+  <data name="yx" xml:space="preserve">
+    <value>Run</value>
+  </data>
+  <data name="yxlb" xml:space="preserve">
+    <value>Run Type</value>
+  </data>
+  <data name="yy" xml:space="preserve">
+    <value>Reasons</value>
+  </data>
+  <data name="yzkgx" xml:space="preserve">
+    <value>Certify the usability</value>
+  </data>
+  <data name="zdr" xml:space="preserve">
+    <value>Creater</value>
+  </data>
+  <data name="zds" xml:space="preserve">
+    <value>Guide book</value>
+  </data>
+  <data name="zj" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="zjh" xml:space="preserve">
+    <value>Add line</value>
+  </data>
+  <data name="zjl" xml:space="preserve">
+    <value>Add row</value>
+  </data>
+  <data name="zl" xml:space="preserve">
+    <value>Assembling</value>
+  </data>
+  <data name="zq" xml:space="preserve">
+    <value>Cycle time</value>
+  </data>
+  <data name="zysx" xml:space="preserve">
+    <value>Notes</value>
+  </data>
+  <data name="zyzj" xml:space="preserve">
+    <value>Special purpose jig</value>
+  </data>
+  <data name="zz" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="alertWsj" xml:space="preserve">
+    <value>Data is empty</value>
+  </data>
+  <data name="alert" xml:space="preserve">
+    <value>System Error,Please re-enter data</value>
+  </data>
+  <data name="store" xml:space="preserve">
+    <value>Store_tname</value>
+  </data>
+  <data name="alertNodata" xml:space="preserve">
+    <value>The data does not exist, please check the goodsname  ,whether the input is correct</value>
+  </data>
+</root>

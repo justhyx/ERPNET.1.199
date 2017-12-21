@@ -1,0 +1,5 @@
+D:\Project\ERPPlugIn\ERPPlugIn\bin\ERPPlugIn.dll
+D:\Project\ERPPlugIn\ERPPlugIn\bin\ERPPlugIn.pdb
+D:\Project\ERPPlugIn\ERPPlugIn\obj\Release\ERPPlugIn.csprojResolveAssemblyReference.cache
+D:\Project\ERPPlugIn\ERPPlugIn\obj\Release\ERPPlugIn.dll
+D:\Project\ERPPlugIn\ERPPlugIn\obj\Release\ERPPlugIn.pdb

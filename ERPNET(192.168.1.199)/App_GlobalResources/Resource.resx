@@ -1,0 +1,720 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="alertksj" xml:space="preserve">
+    <value>数据为空，请确认后重试</value>
+  </data>
+  <data name="alertsjcw" xml:space="preserve">
+    <value>输入日期错误</value>
+  </data>
+  <data name="alerttx" xml:space="preserve">
+    <value>请完整填写资料</value>
+  </data>
+  <data name="alertWxqd" xml:space="preserve">
+    <value>仓位点盘库已存在，无需重新启动</value>
+  </data>
+  <data name="alertxzexcel" xml:space="preserve">
+    <value>文件必须为Excel</value>
+  </data>
+  <data name="alertxzwj" xml:space="preserve">
+    <value>请选择上传文件</value>
+  </data>
+  <data name="alterDoubbleConfirm" xml:space="preserve">
+    <value>无需再次确认</value>
+  </data>
+  <data name="alterfiald" xml:space="preserve">
+    <value>操作失败</value>
+  </data>
+  <data name="alterOk" xml:space="preserve">
+    <value>操作成功</value>
+  </data>
+  <data name="alterReConfrim" xml:space="preserve">
+    <value>无需反审</value>
+  </data>
+  <data name="alterwxz" xml:space="preserve">
+    <value>没有选择任何行</value>
+  </data>
+  <data name="bc" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="bf" xml:space="preserve">
+    <value>部番</value>
+  </data>
+  <data name="bh" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="bhzsh" xml:space="preserve">
+    <value>备货指示号</value>
+  </data>
+  <data name="bhzshsjmx" xml:space="preserve">
+    <value>备货指示号数据明细</value>
+  </data>
+  <data name="blzsh" xml:space="preserve">
+    <value>备料指示号</value>
+  </data>
+  <data name="bpmc" xml:space="preserve">
+    <value>品名</value>
+  </data>
+  <data name="bpmc1" xml:space="preserve">
+    <value>部品名称</value>
+  </data>
+  <data name="bpzl" xml:space="preserve">
+    <value>部品重量</value>
+  </data>
+  <data name="btnSearch" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="bz" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="bz1" xml:space="preserve">
+    <value>别纸</value>
+  </data>
+  <data name="cabs" xml:space="preserve">
+    <value>材质表示</value>
+  </data>
+  <data name="caozuo" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="cdj" xml:space="preserve">
+    <value>测定具</value>
+  </data>
+  <data name="cjr" xml:space="preserve">
+    <value>创建人</value>
+  </data>
+  <data name="cjrq" xml:space="preserve">
+    <value>创建日期</value>
+  </data>
+  <data name="ck" xml:space="preserve">
+    <value>查看</value>
+  </data>
+  <data name="clck" xml:space="preserve">
+    <value>仓位点</value>
+  </data>
+  <data name="clck1" xml:space="preserve">
+    <value>材料仓库</value>
+  </data>
+  <data name="clgl" xml:space="preserve">
+    <value>材料管理</value>
+  </data>
+  <data name="clgyssf" xml:space="preserve">
+    <value>材料供应商色番</value>
+  </data>
+  <data name="cljgxgxx" xml:space="preserve">
+    <value>材料价格修改详细</value>
+  </data>
+  <data name="clqy" xml:space="preserve">
+    <value>处理区域</value>
+  </data>
+  <data name="clxm" xml:space="preserve">
+    <value>测量项目</value>
+  </data>
+  <data name="cr" xml:space="preserve">
+    <value>承认</value>
+  </data>
+  <data name="crt" xml:space="preserve">
+    <value>承认图</value>
+  </data>
+  <data name="cs" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="cx" xml:space="preserve">
+    <value>成型</value>
+  </data>
+  <data name="cy" xml:space="preserve">
+    <value>差异</value>
+  </data>
+  <data name="cyhz" xml:space="preserve">
+    <value>差异汇总</value>
+  </data>
+  <data name="cz" xml:space="preserve">
+    <value>材质</value>
+  </data>
+  <data name="cz1" xml:space="preserve">
+    <value>传真</value>
+  </data>
+  <data name="czry" xml:space="preserve">
+    <value>操作人员</value>
+  </data>
+  <data name="dc" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="dcpdp" xml:space="preserve">
+    <value>导出盘点票</value>
+  </data>
+  <data name="dd" xml:space="preserve">
+    <value>担当</value>
+  </data>
+  <data name="dh" xml:space="preserve">
+    <value>电话</value>
+  </data>
+  <data name="dj" xml:space="preserve">
+    <value>单价</value>
+  </data>
+  <data name="duizhao" xml:space="preserve">
+    <value>对照</value>
+  </data>
+  <data name="dw" xml:space="preserve">
+    <value>单位</value>
+  </data>
+  <data name="dy" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="dypdp" xml:space="preserve">
+    <value>打印盘点票</value>
+  </data>
+  <data name="dz" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="fcwc" xml:space="preserve">
+    <value>粉碎完成</value>
+  </data>
+  <data name="fh" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="fhsyy" xml:space="preserve">
+    <value>返回上一页</value>
+  </data>
+  <data name="fs" xml:space="preserve">
+    <value>反审</value>
+  </data>
+  <data name="fs1" xml:space="preserve">
+    <value>反审</value>
+  </data>
+  <data name="fsdq" xml:space="preserve">
+    <value>反审当前</value>
+  </data>
+  <data name="fsdq1" xml:space="preserve">
+    <value>反审当前</value>
+  </data>
+  <data name="fslbl" xml:space="preserve">
+    <value>粉碎料比例</value>
+  </data>
+  <data name="fsx" xml:space="preserve">
+    <value>负数项</value>
+  </data>
+  <data name="fx" xml:space="preserve">
+    <value>发行</value>
+  </data>
+  <data name="gcnjcggs" xml:space="preserve">
+    <value>工程内检查规格书</value>
+  </data>
+  <data name="gcnjcggslb" xml:space="preserve">
+    <value>工程内检查规格书列表</value>
+  </data>
+  <data name="gcq" xml:space="preserve">
+    <value>公差起</value>
+  </data>
+  <data name="gcz" xml:space="preserve">
+    <value>公差止</value>
+  </data>
+  <data name="gdnr" xml:space="preserve">
+    <value>改订内容</value>
+  </data>
+  <data name="gdrq" xml:space="preserve">
+    <value>改订日期</value>
+  </data>
+  <data name="gg" xml:space="preserve">
+    <value>规格</value>
+  </data>
+  <data name="ggsgl" xml:space="preserve">
+    <value>供应商管理</value>
+  </data>
+  <data name="gms" xml:space="preserve">
+    <value>购买商</value>
+  </data>
+  <data name="gx" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="gys" xml:space="preserve">
+    <value>供应商</value>
+  </data>
+  <data name="gysbh" xml:space="preserve">
+    <value>供应商编号</value>
+  </data>
+  <data name="gysjc" xml:space="preserve">
+    <value>供应商简称</value>
+  </data>
+  <data name="gysm" xml:space="preserve">
+    <value>供应商名</value>
+  </data>
+  <data name="gysxxwh" xml:space="preserve">
+    <value>供应商信息维护</value>
+  </data>
+  <data name="gzsj" xml:space="preserve">
+    <value>干燥时间</value>
+  </data>
+  <data name="gzwd" xml:space="preserve">
+    <value>干燥温度</value>
+  </data>
+  <data name="hf" xml:space="preserve">
+    <value>恢复</value>
+  </data>
+  <data name="hj" xml:space="preserve">
+    <value>合计</value>
+  </data>
+  <data name="hwh" xml:space="preserve">
+    <value>货位号</value>
+  </data>
+  <data name="issccj" xml:space="preserve">
+    <value>是否成产厂家</value>
+  </data>
+  <data name="jbbzyb" xml:space="preserve">
+    <value>见本标准样本</value>
+  </data>
+  <data name="jbxd" xml:space="preserve">
+    <value>见本限度</value>
+  </data>
+  <data name="jcpd" xml:space="preserve">
+    <value>检查频度</value>
+  </data>
+  <data name="jcxm" xml:space="preserve">
+    <value>检查项目</value>
+  </data>
+  <data name="je" xml:space="preserve">
+    <value>金额</value>
+  </data>
+  <data name="jh" xml:space="preserve">
+    <value>记号</value>
+  </data>
+  <data name="jhsc" xml:space="preserve">
+    <value>交货上传</value>
+  </data>
+  <data name="jssj" xml:space="preserve">
+    <value>终止时间</value>
+  </data>
+  <data name="jx" xml:space="preserve">
+    <value>机型</value>
+  </data>
+  <data name="jz" xml:space="preserve">
+    <value>机种</value>
+  </data>
+  <data name="kh" xml:space="preserve">
+    <value>客户</value>
+  </data>
+  <data name="kh1" xml:space="preserve">
+    <value>客户</value>
+  </data>
+  <data name="ksfc" xml:space="preserve">
+    <value>开始粉碎</value>
+  </data>
+  <data name="kssj" xml:space="preserve">
+    <value>起始时间</value>
+  </data>
+  <data name="lxr" xml:space="preserve">
+    <value>联系人</value>
+  </data>
+  <data name="mc" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="mjbh" xml:space="preserve">
+    <value>模具编号</value>
+  </data>
+  <data name="pch" xml:space="preserve">
+    <value>批次号</value>
+  </data>
+  <data name="pdbh" xml:space="preserve">
+    <value>盘点表号</value>
+  </data>
+  <data name="pdbh1" xml:space="preserve">
+    <value>盘点表号</value>
+  </data>
+  <data name="pdblr" xml:space="preserve">
+    <value>盘点表录入</value>
+  </data>
+  <data name="pdbqr" xml:space="preserve">
+    <value>盘点表确认(审核)</value>
+  </data>
+  <data name="pdbqr1" xml:space="preserve">
+    <value>盘点表确认（审核）</value>
+  </data>
+  <data name="pdbsh" xml:space="preserve">
+    <value>盘点表审核</value>
+  </data>
+  <data name="pdbzdrq" xml:space="preserve">
+    <value>盘点表制单日期</value>
+  </data>
+  <data name="pddh" xml:space="preserve">
+    <value>盘点单号</value>
+  </data>
+  <data name="pddh1" xml:space="preserve">
+    <value>盘点单号</value>
+  </data>
+  <data name="pdms" xml:space="preserve">
+    <value>盘点模式</value>
+  </data>
+  <data name="pdrq" xml:space="preserve">
+    <value>盘点日期</value>
+  </data>
+  <data name="pdrq1" xml:space="preserve">
+    <value>盘点日期</value>
+  </data>
+  <data name="pdsl" xml:space="preserve">
+    <value>盘点数量</value>
+  </data>
+  <data name="pdsp" xml:space="preserve">
+    <value>盘点商品</value>
+  </data>
+  <data name="plsc" xml:space="preserve">
+    <value>批量上传</value>
+  </data>
+  <data name="pm" xml:space="preserve">
+    <value>品名</value>
+  </data>
+  <data name="qd" xml:space="preserve">
+    <value>启动</value>
+  </data>
+  <data name="qdpd" xml:space="preserve">
+    <value>启动盘点</value>
+  </data>
+  <data name="qr" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="qrdq" xml:space="preserve">
+    <value>确认当前</value>
+  </data>
+  <data name="qrdq1" xml:space="preserve">
+    <value>确认当期</value>
+  </data>
+  <data name="qrsh" xml:space="preserve">
+    <value>确认审核</value>
+  </data>
+  <data name="qs" xml:space="preserve">
+    <value>取数</value>
+  </data>
+  <data name="qsrgysm" xml:space="preserve">
+    <value>请输入供应商名</value>
+  </data>
+  <data name="qx" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="qxz" xml:space="preserve">
+    <value>请选择</value>
+  </data>
+  <data name="qy" xml:space="preserve">
+    <value>区域</value>
+  </data>
+  <data name="rsl" xml:space="preserve">
+    <value>按染色料计算</value>
+  </data>
+  <data name="rz" xml:space="preserve">
+    <value>认证</value>
+  </data>
+  <data name="sc" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="sc1" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="sccj" xml:space="preserve">
+    <value>生产厂家</value>
+  </data>
+  <data name="sch" xml:space="preserve">
+    <value>删除行</value>
+  </data>
+  <data name="sf" xml:space="preserve">
+    <value>色番</value>
+  </data>
+  <data name="sfgms" xml:space="preserve">
+    <value>色粉购买商</value>
+  </data>
+  <data name="sfscpdb" xml:space="preserve">
+    <value>是否确认该盘点表?</value>
+  </data>
+  <data name="sfxh" xml:space="preserve">
+    <value>色粉型号</value>
+  </data>
+  <data name="sh" xml:space="preserve">
+    <value>审核</value>
+  </data>
+  <data name="shrq" xml:space="preserve">
+    <value>送货日期</value>
+  </data>
+  <data name="shyj" xml:space="preserve">
+    <value>审核意见</value>
+  </data>
+  <data name="sjgl" xml:space="preserve">
+    <value>数据管理</value>
+  </data>
+  <data name="sjsc" xml:space="preserve">
+    <value>数据上传</value>
+  </data>
+  <data name="skzl" xml:space="preserve">
+    <value>水口重量</value>
+  </data>
+  <data name="sp" xml:space="preserve">
+    <value>商品</value>
+  </data>
+  <data name="spda" xml:space="preserve">
+    <value>商品档案</value>
+  </data>
+  <data name="spsx" xml:space="preserve">
+    <value>商品属性</value>
+  </data>
+  <data name="ss" xml:space="preserve">
+    <value>收索</value>
+  </data>
+  <data name="sskc" xml:space="preserve">
+    <value>实时库存</value>
+  </data>
+  <data name="sx" xml:space="preserve">
+    <value>搜寻</value>
+  </data>
+  <data name="sy" xml:space="preserve">
+    <value>所有</value>
+  </data>
+  <data name="szpfcshtglb" xml:space="preserve">
+    <value>试作品粉碎审核通过列表</value>
+  </data>
+  <data name="szpfslb" xml:space="preserve">
+    <value>试作品粉碎列表</value>
+  </data>
+  <data name="tj" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="tj1" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="tjcesj" xml:space="preserve">
+    <value>添加测试数据</value>
+  </data>
+  <data name="tjgys" xml:space="preserve">
+    <value>添加供应商</value>
+  </data>
+  <data name="wkc" xml:space="preserve">
+    <value>无库存</value>
+  </data>
+  <data name="wlcg" xml:space="preserve">
+    <value>物料采购</value>
+  </data>
+  <data name="wlsx" xml:space="preserve">
+    <value>物料属性</value>
+  </data>
+  <data name="wlyc" xml:space="preserve">
+    <value>物料预测</value>
+  </data>
+  <data name="xg" xml:space="preserve">
+    <value>修改</value>
+  </data>
+  <data name="xh" xml:space="preserve">
+    <value>型号</value>
+  </data>
+  <data name="xitem" xml:space="preserve">
+    <value>X项</value>
+  </data>
+  <data name="xjju" xml:space="preserve">
+    <value>型检记录</value>
+  </data>
+  <data name="xtsl" xml:space="preserve">
+    <value>系统数量</value>
+  </data>
+  <data name="xx" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="xz" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="xz1" xml:space="preserve">
+    <value>选择</value>
+  </data>
+  <data name="xzwj" xml:space="preserve">
+    <value>选择文件</value>
+  </data>
+  <data name="y" xml:space="preserve">
+    <value>有</value>
+  </data>
+  <data name="yl" xml:space="preserve">
+    <value>预览</value>
+  </data>
+  <data name="ylbh" xml:space="preserve">
+    <value>原料编号</value>
+  </data>
+  <data name="ys" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="ys1" xml:space="preserve">
+    <value>颜色</value>
+  </data>
+  <data name="ysc" xml:space="preserve">
+    <value>已删除</value>
+  </data>
+  <data name="ysl" xml:space="preserve">
+    <value>按原色料计算</value>
+  </data>
+  <data name="yx" xml:space="preserve">
+    <value>运行</value>
+  </data>
+  <data name="yxlb" xml:space="preserve">
+    <value>运行类别</value>
+  </data>
+  <data name="yy" xml:space="preserve">
+    <value>原因</value>
+  </data>
+  <data name="yzkgx" xml:space="preserve">
+    <value>验证可用性</value>
+  </data>
+  <data name="zdr" xml:space="preserve">
+    <value>制单人</value>
+  </data>
+  <data name="zds" xml:space="preserve">
+    <value>指导书</value>
+  </data>
+  <data name="zj" xml:space="preserve">
+    <value>增加</value>
+  </data>
+  <data name="zjh" xml:space="preserve">
+    <value>增加行</value>
+  </data>
+  <data name="zjl" xml:space="preserve">
+    <value>增加列</value>
+  </data>
+  <data name="zl" xml:space="preserve">
+    <value>组立</value>
+  </data>
+  <data name="zq" xml:space="preserve">
+    <value>周期</value>
+  </data>
+  <data name="zysx" xml:space="preserve">
+    <value>注意事项</value>
+  </data>
+  <data name="zyzj" xml:space="preserve">
+    <value>专用治具</value>
+  </data>
+  <data name="zz" xml:space="preserve">
+    <value>备注</value>
+  </data>
+  <data name="alertWsj" xml:space="preserve">
+    <value>仓位点中无数据,无需启动盘点</value>
+  </data>
+  <data name="qr1" xml:space="preserve">
+    <value>确认</value>
+  </data>
+  <data name="sh1" xml:space="preserve">
+    <value>审核</value>
+  </data>
+  <data name="alert" xml:space="preserve">
+    <value>系统错误,请重新录入数据</value>
+  </data>
+  <data name="store" xml:space="preserve">
+    <value>Store_name</value>
+  </data>
+  <data name="alertNodata" xml:space="preserve">
+    <value>资料不存在,请检查部番是否输入正确</value>
+  </data>
+</root>

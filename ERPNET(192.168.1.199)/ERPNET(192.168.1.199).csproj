@@ -1,0 +1,1137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3FC1E328-A92B-492F-B9C9-B147A37C086F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERPPlugIn</RootNamespace>
+    <AssemblyName>ERPPlugIn</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DBCommandDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DBCommandDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CrushedMaterialManager\CrushedMaterial_Approved.aspx" />
+    <Content Include="CrushedMaterialManager\CrushedMaterial_List.aspx" />
+    <Content Include="css\css.css" />
+    <Content Include="css\css_p.css" />
+    <Content Include="css\ie6.css" />
+    <Content Include="css\layout.css" />
+    <Content Include="css\print.css" />
+    <Content Include="css\style.css" />
+    <Content Include="css\templatemo_style.css" />
+    <Content Include="Equip\equip_detail.aspx" />
+    <Content Include="Equip\IndexEquipState.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="GoodsManager\Goods_AddNew.aspx" />
+    <Content Include="GoodsManager\Goods_Aprove.aspx" />
+    <Content Include="GoodsManager\Goods_Change_Record.aspx" />
+    <Content Include="GoodsManager\Goods_Confirm.aspx" />
+    <Content Include="GoodsManager\Goods_Input.aspx" />
+    <Content Include="GoodsManager\Goods_List.aspx" />
+    <Content Include="GoodsManager\Goods_Modify.aspx" />
+    <Content Include="GoodsManager\Goods_Print.aspx" />
+    <Content Include="GoodsManager\Goods_Record.aspx" />
+    <Content Include="GoodsManager\PrintPage.htm" />
+    <Content Include="Goods_Ito\goods_ito.aspx" />
+    <Content Include="Images\500_03.gif" />
+    <Content Include="Images\500_04.gif" />
+    <Content Include="Images\Admin.css" />
+    <Content Include="Images\admin.js" />
+    <Content Include="Images\Admin1.js" />
+    <Content Include="Images\AdminLogin.asp" />
+    <Content Include="Images\Admin_Login1_admin.gif" />
+    <Content Include="Images\admin_login_01.gif" />
+    <Content Include="Images\admin_login_02.gif" />
+    <Content Include="Images\admin_login_03.gif" />
+    <Content Include="Images\arrow.gif" />
+    <Content Include="Images\Bar.gif" />
+    <Content Include="Images\bg2.gif" />
+    <Content Include="Images\button1_n.jpg" />
+    <Content Include="Images\button2_n.jpg" />
+    <Content Include="Images\CssAdmin.css" />
+    <Content Include="Images\dot.gif" />
+    <Content Include="Images\Dot_Info.gif" />
+    <Content Include="Images\Edit.gif" />
+    <Content Include="Images\Explain.gif" />
+    <Content Include="Images\file_book.png" />
+    <Content Include="Images\help_icon.gif" />
+    <Content Include="Images\index_login.gif" />
+    <Content Include="Images\ind_logo.gif" />
+    <Content Include="Images\left.gif" />
+    <Content Include="Images\left_01.gif" />
+    <Content Include="Images\left_bg.gif" />
+    <Content Include="Images\left_menu_bg.gif" />
+    <Content Include="Images\Login_line.gif" />
+    <Content Include="Images\logo_up.gif" />
+    <Content Include="Images\menu01.gif" />
+    <Content Include="Images\menu01_right.gif" />
+    <Content Include="Images\Menu_BG.gif" />
+    <Content Include="Images\Menu_BG1.gif" />
+    <Content Include="Images\mid_01.gif" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\NoMap.gif" />
+    <Content Include="Images\paymentsby_01.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\prototype.js" />
+    <Content Include="Images\qqface\100_f.gif" />
+    <Content Include="Images\qqface\100_m.gif" />
+    <Content Include="Images\qqface\101_f.gif" />
+    <Content Include="Images\qqface\101_m.gif" />
+    <Content Include="Images\qqface\10_f.gif" />
+    <Content Include="Images\qqface\10_m.gif" />
+    <Content Include="Images\qqface\11_f.gif" />
+    <Content Include="Images\qqface\11_m.gif" />
+    <Content Include="Images\qqface\12_f.gif" />
+    <Content Include="Images\qqface\12_m.gif" />
+    <Content Include="Images\qqface\13_f.gif" />
+    <Content Include="Images\qqface\13_m.gif" />
+    <Content Include="Images\qqface\14_f.gif" />
+    <Content Include="Images\qqface\14_m.gif" />
+    <Content Include="Images\qqface\15_f.gif" />
+    <Content Include="Images\qqface\15_m.gif" />
+    <Content Include="Images\qqface\16_f.gif" />
+    <Content Include="Images\qqface\16_m.gif" />
+    <Content Include="Images\qqface\17_f.gif" />
+    <Content Include="Images\qqface\17_m.gif" />
+    <Content Include="Images\qqface\18_f.gif" />
+    <Content Include="Images\qqface\18_m.gif" />
+    <Content Include="Images\qqface\19_f.gif" />
+    <Content Include="Images\qqface\19_m.gif" />
+    <Content Include="Images\qqface\1_f.gif" />
+    <Content Include="Images\qqface\1_m.gif" />
+    <Content Include="Images\qqface\20_f.gif" />
+    <Content Include="Images\qqface\20_m.gif" />
+    <Content Include="Images\qqface\21_f.gif" />
+    <Content Include="Images\qqface\21_m.gif" />
+    <Content Include="Images\qqface\22_f.gif" />
+    <Content Include="Images\qqface\22_m.gif" />
+    <Content Include="Images\qqface\23_f.gif" />
+    <Content Include="Images\qqface\23_m.gif" />
+    <Content Include="Images\qqface\24_f.gif" />
+    <Content Include="Images\qqface\24_m.gif" />
+    <Content Include="Images\qqface\25_f.gif" />
+    <Content Include="Images\qqface\25_m.gif" />
+    <Content Include="Images\qqface\26_f.gif" />
+    <Content Include="Images\qqface\26_m.gif" />
+    <Content Include="Images\qqface\27_f.gif" />
+    <Content Include="Images\qqface\27_m.gif" />
+    <Content Include="Images\qqface\28_f.gif" />
+    <Content Include="Images\qqface\28_m.gif" />
+    <Content Include="Images\qqface\29_f.gif" />
+    <Content Include="Images\qqface\29_m.gif" />
+    <Content Include="Images\qqface\2_f.gif" />
+    <Content Include="Images\qqface\2_m.gif" />
+    <Content Include="Images\qqface\30_f.gif" />
+    <Content Include="Images\qqface\30_m.gif" />
+    <Content Include="Images\qqface\31_f.gif" />
+    <Content Include="Images\qqface\31_m.gif" />
+    <Content Include="Images\qqface\32_f.gif" />
+    <Content Include="Images\qqface\32_m.gif" />
+    <Content Include="Images\qqface\33_f.gif" />
+    <Content Include="Images\qqface\33_m.gif" />
+    <Content Include="Images\qqface\34_f.gif" />
+    <Content Include="Images\qqface\34_m.gif" />
+    <Content Include="Images\qqface\35_f.gif" />
+    <Content Include="Images\qqface\35_m.gif" />
+    <Content Include="Images\qqface\36_f.gif" />
+    <Content Include="Images\qqface\36_m.gif" />
+    <Content Include="Images\qqface\37_f.gif" />
+    <Content Include="Images\qqface\37_m.gif" />
+    <Content Include="Images\qqface\38_f.gif" />
+    <Content Include="Images\qqface\38_m.gif" />
+    <Content Include="Images\qqface\39_f.gif" />
+    <Content Include="Images\qqface\39_m.gif" />
+    <Content Include="Images\qqface\3_f.gif" />
+    <Content Include="Images\qqface\3_m.gif" />
+    <Content Include="Images\qqface\40_f.gif" />
+    <Content Include="Images\qqface\40_m.gif" />
+    <Content Include="Images\qqface\41_f.gif" />
+    <Content Include="Images\qqface\41_m.gif" />
+    <Content Include="Images\qqface\42_f.gif" />
+    <Content Include="Images\qqface\42_m.gif" />
+    <Content Include="Images\qqface\43_f.gif" />
+    <Content Include="Images\qqface\43_m.gif" />
+    <Content Include="Images\qqface\44_f.gif" />
+    <Content Include="Images\qqface\44_m.gif" />
+    <Content Include="Images\qqface\45_f.gif" />
+    <Content Include="Images\qqface\45_m.gif" />
+    <Content Include="Images\qqface\46_f.gif" />
+    <Content Include="Images\qqface\46_m.gif" />
+    <Content Include="Images\qqface\47_f.gif" />
+    <Content Include="Images\qqface\47_m.gif" />
+    <Content Include="Images\qqface\48_f.gif" />
+    <Content Include="Images\qqface\48_m.gif" />
+    <Content Include="Images\qqface\49_f.gif" />
+    <Content Include="Images\qqface\49_m.gif" />
+    <Content Include="Images\qqface\4_f.gif" />
+    <Content Include="Images\qqface\4_m.gif" />
+    <Content Include="Images\qqface\50_f.gif" />
+    <Content Include="Images\qqface\50_m.gif" />
+    <Content Include="Images\qqface\51_f.gif" />
+    <Content Include="Images\qqface\51_m.gif" />
+    <Content Include="Images\qqface\52_f.gif" />
+    <Content Include="Images\qqface\52_m.gif" />
+    <Content Include="Images\qqface\53_f.gif" />
+    <Content Include="Images\qqface\53_m.gif" />
+    <Content Include="Images\qqface\54_f.gif" />
+    <Content Include="Images\qqface\54_m.gif" />
+    <Content Include="Images\qqface\55_f.gif" />
+    <Content Include="Images\qqface\55_m.gif" />
+    <Content Include="Images\qqface\56_f.gif" />
+    <Content Include="Images\qqface\56_m.gif" />
+    <Content Include="Images\qqface\57_f.gif" />
+    <Content Include="Images\qqface\57_m.gif" />
+    <Content Include="Images\qqface\58_f.gif" />
+    <Content Include="Images\qqface\58_m.gif" />
+    <Content Include="Images\qqface\59_f.gif" />
+    <Content Include="Images\qqface\59_m.gif" />
+    <Content Include="Images\qqface\5_f.gif" />
+    <Content Include="Images\qqface\5_m.gif" />
+    <Content Include="Images\qqface\60_f.gif" />
+    <Content Include="Images\qqface\60_m.gif" />
+    <Content Include="Images\qqface\61_f.gif" />
+    <Content Include="Images\qqface\61_m.gif" />
+    <Content Include="Images\qqface\62_f.gif" />
+    <Content Include="Images\qqface\62_m.gif" />
+    <Content Include="Images\qqface\63_f.gif" />
+    <Content Include="Images\qqface\63_m.gif" />
+    <Content Include="Images\qqface\64_f.gif" />
+    <Content Include="Images\qqface\64_m.gif" />
+    <Content Include="Images\qqface\65_f.gif" />
+    <Content Include="Images\qqface\65_m.gif" />
+    <Content Include="Images\qqface\66_f.gif" />
+    <Content Include="Images\qqface\66_m.gif" />
+    <Content Include="Images\qqface\67_f.gif" />
+    <Content Include="Images\qqface\67_m.gif" />
+    <Content Include="Images\qqface\68_f.gif" />
+    <Content Include="Images\qqface\68_m.gif" />
+    <Content Include="Images\qqface\69_f.gif" />
+    <Content Include="Images\qqface\69_m.gif" />
+    <Content Include="Images\qqface\6_f.gif" />
+    <Content Include="Images\qqface\6_m.gif" />
+    <Content Include="Images\qqface\70_f.gif" />
+    <Content Include="Images\qqface\70_m.gif" />
+    <Content Include="Images\qqface\71_f.gif" />
+    <Content Include="Images\qqface\71_m.gif" />
+    <Content Include="Images\qqface\72_f.gif" />
+    <Content Include="Images\qqface\72_m.gif" />
+    <Content Include="Images\qqface\73_f.gif" />
+    <Content Include="Images\qqface\73_m.gif" />
+    <Content Include="Images\qqface\74_f.gif" />
+    <Content Include="Images\qqface\74_m.gif" />
+    <Content Include="Images\qqface\75_f.gif" />
+    <Content Include="Images\qqface\75_m.gif" />
+    <Content Include="Images\qqface\76_f.gif" />
+    <Content Include="Images\qqface\76_m.gif" />
+    <Content Include="Images\qqface\77_f.gif" />
+    <Content Include="Images\qqface\77_m.gif" />
+    <Content Include="Images\qqface\78_f.gif" />
+    <Content Include="Images\qqface\78_m.gif" />
+    <Content Include="Images\qqface\79_f.gif" />
+    <Content Include="Images\qqface\79_m.gif" />
+    <Content Include="Images\qqface\7_f.gif" />
+    <Content Include="Images\qqface\7_m.gif" />
+    <Content Include="Images\qqface\80_f.gif" />
+    <Content Include="Images\qqface\80_m.gif" />
+    <Content Include="Images\qqface\81_f.gif" />
+    <Content Include="Images\qqface\81_m.gif" />
+    <Content Include="Images\qqface\82_f.gif" />
+    <Content Include="Images\qqface\82_m.gif" />
+    <Content Include="Images\qqface\83_f.gif" />
+    <Content Include="Images\qqface\83_m.gif" />
+    <Content Include="Images\qqface\84_f.gif" />
+    <Content Include="Images\qqface\84_m.gif" />
+    <Content Include="Images\qqface\85_f.gif" />
+    <Content Include="Images\qqface\85_m.gif" />
+    <Content Include="Images\qqface\86_f.gif" />
+    <Content Include="Images\qqface\86_m.gif" />
+    <Content Include="Images\qqface\87_f.gif" />
+    <Content Include="Images\qqface\87_m.gif" />
+    <Content Include="Images\qqface\88_f.gif" />
+    <Content Include="Images\qqface\88_m.gif" />
+    <Content Include="Images\qqface\89_f.gif" />
+    <Content Include="Images\qqface\89_m.gif" />
+    <Content Include="Images\qqface\8_f.gif" />
+    <Content Include="Images\qqface\8_m.gif" />
+    <Content Include="Images\qqface\90_f.gif" />
+    <Content Include="Images\qqface\90_m.gif" />
+    <Content Include="Images\qqface\91_f.gif" />
+    <Content Include="Images\qqface\91_m.gif" />
+    <Content Include="Images\qqface\92_f.gif" />
+    <Content Include="Images\qqface\92_m.gif" />
+    <Content Include="Images\qqface\93_f.gif" />
+    <Content Include="Images\qqface\93_m.gif" />
+    <Content Include="Images\qqface\94_f.gif" />
+    <Content Include="Images\qqface\94_m.gif" />
+    <Content Include="Images\qqface\95_f.gif" />
+    <Content Include="Images\qqface\95_m.gif" />
+    <Content Include="Images\qqface\96_f.gif" />
+    <Content Include="Images\qqface\96_m.gif" />
+    <Content Include="Images\qqface\97_f.gif" />
+    <Content Include="Images\qqface\97_m.gif" />
+    <Content Include="Images\qqface\98_f.gif" />
+    <Content Include="Images\qqface\98_m.gif" />
+    <Content Include="Images\qqface\99_f.gif" />
+    <Content Include="Images\qqface\99_m.gif" />
+    <Content Include="Images\qqface\9_f.gif" />
+    <Content Include="Images\qqface\9_m.gif" />
+    <Content Include="Images\qqonline.gif" />
+    <Content Include="Images\qq\skin\10\bottom.gif" />
+    <Content Include="Images\qq\skin\10\middle.gif" />
+    <Content Include="Images\qq\skin\10\top.gif" />
+    <Content Include="Images\qq\skin\11\bottom.gif" />
+    <Content Include="Images\qq\skin\11\middle.gif" />
+    <Content Include="Images\qq\skin\11\top.gif" />
+    <Content Include="Images\qq\skin\12\bottom.gif" />
+    <Content Include="Images\qq\skin\12\middle.gif" />
+    <Content Include="Images\qq\skin\12\top.gif" />
+    <Content Include="Images\qq\skin\1\bottom.gif" />
+    <Content Include="Images\qq\skin\1\middle.gif" />
+    <Content Include="Images\qq\skin\1\top.gif" />
+    <Content Include="Images\qq\skin\2\bottom.gif" />
+    <Content Include="Images\qq\skin\2\middle.gif" />
+    <Content Include="Images\qq\skin\2\top.gif" />
+    <Content Include="Images\qq\skin\3\bottom.gif" />
+    <Content Include="Images\qq\skin\3\middle.gif" />
+    <Content Include="Images\qq\skin\3\top.gif" />
+    <Content Include="Images\qq\skin\4\bottom.gif" />
+    <Content Include="Images\qq\skin\4\middle.gif" />
+    <Content Include="Images\qq\skin\4\top.gif" />
+    <Content Include="Images\qq\skin\5\bottom.gif" />
+    <Content Include="Images\qq\skin\5\middle.gif" />
+    <Content Include="Images\qq\skin\5\top.gif" />
+    <Content Include="Images\qq\skin\6\bottom.gif" />
+    <Content Include="Images\qq\skin\6\middle.gif" />
+    <Content Include="Images\qq\skin\6\top.gif" />
+    <Content Include="Images\qq\skin\7\bottom.gif" />
+    <Content Include="Images\qq\skin\7\middle.gif" />
+    <Content Include="Images\qq\skin\7\top.gif" />
+    <Content Include="Images\qq\skin\8\bottom.gif" />
+    <Content Include="Images\qq\skin\8\middle.gif" />
+    <Content Include="Images\qq\skin\8\top.gif" />
+    <Content Include="Images\qq\skin\9\bottom.gif" />
+    <Content Include="Images\qq\skin\9\middle.gif" />
+    <Content Include="Images\qq\skin\9\top.gif" />
+    <Content Include="Images\QR.jpg" />
+    <Content Include="Images\right.gif" />
+    <Content Include="Images\right_01.gif" />
+    <Content Include="Images\right_i.gif" />
+    <Content Include="Images\Select.gif" />
+    <Content Include="Images\SoftKey.gif" />
+    <Content Include="Images\SoftKey.Js" />
+    <Content Include="Images\SortEnd_Folder_Close.gif" />
+    <Content Include="Images\SortEnd_Folder_Open.gif" />
+    <Content Include="Images\Sort_File.gif" />
+    <Content Include="Images\Sort_File_End.gif" />
+    <Content Include="Images\Sort_Folder_Close.gif" />
+    <Content Include="Images\Sort_Folder_Open.gif" />
+    <Content Include="Images\Sort_Listline.gif" />
+    <Content Include="Images\str_pd.gif" />
+    <Content Include="Images\style.css" />
+    <Content Include="Images\style_left.css" />
+    <Content Include="Images\Survey.gif" />
+    <Content Include="Images\SysLeft_bg.gif" />
+    <Content Include="Images\teble_bottom_left.gif" />
+    <Content Include="Images\teble_bottom_right.gif" />
+    <Content Include="Images\teble_top_left.gif" />
+    <Content Include="Images\teble_top_right.gif" />
+    <Content Include="Images\top_bg.gif" />
+    <Content Include="Images\top_table_leftbg.gif" />
+    <Content Include="Images\Upload.gif" />
+    <Content Include="Images\_notes\dwsync.xml" />
+    <Content Include="Index.aspx" />
+    <Content Include="InventoryManager\Inventory_Begin.aspx" />
+    <Content Include="InventoryManager\Inventory_Confirm.aspx" />
+    <Content Include="InventoryManager\Inventory_FinalConfirm.aspx" />
+    <Content Include="InventoryManager\Inventory_KeyIn.aspx" />
+    <Content Include="InventoryManager\Inventory_KeyInNoData.aspx" />
+    <Content Include="InventoryManager\Inventory_PrintFrom.aspx" />
+    <Content Include="left.htm" />
+    <Content Include="left.html" />
+    <Content Include="Login.aspx" />
+    <Content Include="LoginRecord.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="MailAlertManager\MailAlertSet.aspx" />
+    <Content Include="mainfirm.aspx" />
+    <Content Include="MaintenanceRecords\MaintenanceRecords.aspx" />
+    <Content Include="MaintenanceRecords\MaintenanceRecords_List.aspx" />
+    <Content Include="MaintenanceRecords\MaintenanceRecords_PicView.aspx" />
+    <Content Include="MaterailsManager\MaterailsStock_Begin.aspx" />
+    <Content Include="MaterailsManager\MaterailsStock_Confirm.aspx" />
+    <Content Include="MaterailsManager\MaterailsStock_FinalConfirm.aspx" />
+    <Content Include="MaterailsManager\MaterailsStock_KeyIn.aspx" />
+    <Content Include="MaterailsManager\MaterailsStock_KeyInNoData.aspx" />
+    <Content Include="MaterailsPriceManager\MaterailsPrice_Detail.aspx" />
+    <Content Include="MaterailsPriceManager\MaterailsPrice_index.aspx" />
+    <Content Include="MaterialControlManager\BarcodeChk.aspx" />
+    <Content Include="MaterialControlManager\BarcodRecords.aspx" />
+    <Content Include="MaterialControlManager\BarcodRecordsExport.aspx" />
+    <Content Include="MaterialControlManager\GetBarcod.aspx" />
+    <Content Include="MaterialControlManager\Material_Control_OperateForm.aspx" />
+    <Content Include="MaterialControlManager\Stock_out_page.aspx" />
+    <Content Include="MaterialForecastManager\ForecastInput.aspx" />
+    <Content Include="MaterialForecastManager\MaterialForecast_Purchasing.aspx" />
+    <Content Include="MoldManager\M_materailsApply\M_materails_Apply_Confirm.aspx" />
+    <Content Include="MoldManager\M_materailsApply\M_materails_Apply_Form.aspx" />
+    <Content Include="MoldManager\M_materailsManager\M_materails_Add.aspx" />
+    <Content Include="MoldManager\M_materailsManager\M_materails_Edit.aspx" />
+    <Content Include="MoldManager\M_materailsManager\M_materails_List.aspx" />
+    <Content Include="MoldManager\M_materailsOrder\M_materails_OrderList.aspx" />
+    <Content Include="MoldManager\M_materailsOrder\M_materails_OrderPurchase.aspx" />
+    <Content Include="MoldManager\M_materailsStockIn\M_materails_StockIn.aspx" />
+    <Content Include="MoldManager\M_materailsStockIn\M_materails_StockIn_Confirm.aspx" />
+    <Content Include="MoldManager\M_materailsStockIn\M_materails_StockIn_List.aspx" />
+    <Content Include="MoldManager\M_materailsStockOut\M_materails_StockOut.aspx" />
+    <Content Include="MoldManager\M_materailsStockOut\M_materails_StockOut_Confirm.aspx" />
+    <Content Include="MoldManager\M_materailsStockOut\M_materails_StockOut_List.aspx" />
+    <Content Include="Mold_Management_Accounting\Mode_Add_Type.aspx" />
+    <Content Include="Mold_Management_Accounting\Mode_Index.aspx" />
+    <Content Include="Mold_Management_Accounting\Mode_List.aspx" />
+    <Content Include="Mold_Management_Accounting\Mode_Modify.aspx" />
+    <Content Include="Mold_Management_Accounting\Mode_Recipt_Data.aspx" />
+    <Content Include="Mold_Management_Accounting\Mode_SetRate.aspx" />
+    <Content Include="My97DatePicker\calendar.js" />
+    <Content Include="My97DatePicker\config.js" />
+    <Content Include="My97DatePicker\lang\en.js" />
+    <Content Include="My97DatePicker\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\My97DatePicker.htm" />
+    <Content Include="My97DatePicker\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\skin\default\img.gif" />
+    <Content Include="My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="My97DatePicker\WdatePicker.js" />
+    <Content Include="My97DatePicker\开发包\lang\en.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-cn.js" />
+    <Content Include="My97DatePicker\开发包\lang\zh-tw.js" />
+    <Content Include="My97DatePicker\开发包\readme.txt" />
+    <Content Include="My97DatePicker\开发包\skin\datePicker.gif" />
+    <Content Include="My97DatePicker\开发包\skin\default\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\default\img.gif" />
+    <Content Include="My97DatePicker\开发包\skin\WdatePicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\bg.jpg" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\datepicker.css" />
+    <Content Include="My97DatePicker\开发包\skin\whyGreen\img.gif" />
+    <Content Include="obj\Debug\ERPPlugIn.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\ERPPlugIn.dll" />
+    <Content Include="obj\Debug\ERPPlugIn.pdb" />
+    <Content Include="obj\Debug\TempPE\App_GlobalResources.Resource.designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\App_GlobalResources.Resource.en-U S.designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\App_GlobalResources.Resource.en-us.designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\App_GlobalResources.Resource.th-th.designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\App_LocalResources.Inventory_Confirm.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\App_LocalResources.Nation.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\InventoryManager.Inventory_Confirm.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\InventoryManager.Resource.Designer.cs.dll" />
+    <Content Include="obj\Debug\TempPE\InventoryManager.Resource.en-us.Designer.cs.dll" />
+    <Content Include="obj\Release\ERPPlugIn.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\ERPPlugIn.dll" />
+    <Content Include="obj\Release\ERPPlugIn.pdb" />
+    <Content Include="obj\Release\TempPE\App_GlobalResources.Resource.designer.cs.dll" />
+    <Content Include="obj\Release\TempPE\App_GlobalResources.Resource.en-us.designer.cs.dll" />
+    <Content Include="PDAHomePage.htm" />
+    <Content Include="p\2d1f_c.aspx" />
+    <Content Include="right.html" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="syscome.html" />
+    <Content Include="top.html" />
+    <Content Include="UploadPics\1.png" />
+    <Content Include="UploadPics\goodsPicHF201503261700430860.png" />
+    <Content Include="UserManager\User_Add.aspx" />
+    <Content Include="Vender_add.aspx" />
+    <Content Include="Vender_DeletedItems.aspx" />
+    <Content Include="Vender_Edit.aspx" />
+    <Content Include="Vendor_List.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_GlobalResources\Resource.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.en-us.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.en-us.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.th-th.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.th-th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ClassDES.cs" />
+    <Compile Include="Class\CommadMethod.cs" />
+    <Compile Include="Class\GetAprove.cs" />
+    <Compile Include="Class\LablePrint.cs" />
+    <Compile Include="Class\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Class\SendMail.cs" />
+    <Compile Include="CrushedMaterialManager\CrushedMaterial_Approved.aspx.cs">
+      <DependentUpon>CrushedMaterial_Approved.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\CrushedMaterial_Approved.aspx.designer.cs">
+      <DependentUpon>CrushedMaterial_Approved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\CrushedMaterial_List.aspx.cs">
+      <DependentUpon>CrushedMaterial_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\CrushedMaterial_List.aspx.designer.cs">
+      <DependentUpon>CrushedMaterial_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equip\Datatable.cs" />
+    <Compile Include="Equip\equip_detail.aspx.cs">
+      <DependentUpon>equip_detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equip\equip_detail.aspx.designer.cs">
+      <DependentUpon>equip_detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equip\IndexEquipState.aspx.cs">
+      <DependentUpon>IndexEquipState.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equip\IndexEquipState.aspx.designer.cs">
+      <DependentUpon>IndexEquipState.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\GoodsData.ashx.cs">
+      <DependentUpon>GoodsData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_AddNew.aspx.cs">
+      <DependentUpon>Goods_AddNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_AddNew.aspx.designer.cs">
+      <DependentUpon>Goods_AddNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Aprove.aspx.cs">
+      <DependentUpon>Goods_Aprove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Aprove.aspx.designer.cs">
+      <DependentUpon>Goods_Aprove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Change_Record.aspx.cs">
+      <DependentUpon>Goods_Change_Record.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Change_Record.aspx.designer.cs">
+      <DependentUpon>Goods_Change_Record.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Confirm.aspx.cs">
+      <DependentUpon>Goods_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Confirm.aspx.designer.cs">
+      <DependentUpon>Goods_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Input.aspx.cs">
+      <DependentUpon>Goods_Input.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Input.aspx.designer.cs">
+      <DependentUpon>Goods_Input.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_List.aspx.cs">
+      <DependentUpon>Goods_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_List.aspx.designer.cs">
+      <DependentUpon>Goods_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Modify.aspx.cs">
+      <DependentUpon>Goods_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Modify.aspx.designer.cs">
+      <DependentUpon>Goods_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Print.aspx.cs">
+      <DependentUpon>Goods_Print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Print.aspx.designer.cs">
+      <DependentUpon>Goods_Print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Record.aspx.cs">
+      <DependentUpon>Goods_Record.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GoodsManager\Goods_Record.aspx.designer.cs">
+      <DependentUpon>Goods_Record.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods_Ito\goods_ito.aspx.cs">
+      <DependentUpon>goods_ito.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods_Ito\goods_ito.aspx.designer.cs">
+      <DependentUpon>goods_ito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_Begin.aspx.cs">
+      <DependentUpon>Inventory_Begin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_Begin.aspx.designer.cs">
+      <DependentUpon>Inventory_Begin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_Confirm.aspx.cs">
+      <DependentUpon>Inventory_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_Confirm.aspx.designer.cs">
+      <DependentUpon>Inventory_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_FinalConfirm.aspx.cs">
+      <DependentUpon>Inventory_FinalConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_FinalConfirm.aspx.designer.cs">
+      <DependentUpon>Inventory_FinalConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_KeyIn.aspx.cs">
+      <DependentUpon>Inventory_KeyIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_KeyIn.aspx.designer.cs">
+      <DependentUpon>Inventory_KeyIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_KeyInNoData.aspx.cs">
+      <DependentUpon>Inventory_KeyInNoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_KeyInNoData.aspx.designer.cs">
+      <DependentUpon>Inventory_KeyInNoData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_PrintFrom.aspx.cs">
+      <DependentUpon>Inventory_PrintFrom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InventoryManager\Inventory_PrintFrom.aspx.designer.cs">
+      <DependentUpon>Inventory_PrintFrom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginRecord.aspx.cs">
+      <DependentUpon>LoginRecord.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginRecord.aspx.designer.cs">
+      <DependentUpon>LoginRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MailAlertManager\MailAlertSet.aspx.cs">
+      <DependentUpon>MailAlertSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MailAlertManager\MailAlertSet.aspx.designer.cs">
+      <DependentUpon>MailAlertSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRecords\EquipData.ashx.cs">
+      <DependentUpon>EquipData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRecords\MaintenanceRecords.aspx.cs">
+      <DependentUpon>MaintenanceRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRecords\MaintenanceRecords.aspx.designer.cs">
+      <DependentUpon>MaintenanceRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRecords\MaintenanceRecords_List.aspx.cs">
+      <DependentUpon>MaintenanceRecords_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRecords\MaintenanceRecords_List.aspx.designer.cs">
+      <DependentUpon>MaintenanceRecords_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceRecords\MaintenanceRecords_PicView.aspx.cs">
+      <DependentUpon>MaintenanceRecords_PicView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenanceRecords\MaintenanceRecords_PicView.aspx.designer.cs">
+      <DependentUpon>MaintenanceRecords_PicView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_Begin.aspx.cs">
+      <DependentUpon>MaterailsStock_Begin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_Begin.aspx.designer.cs">
+      <DependentUpon>MaterailsStock_Begin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_Confirm.aspx.cs">
+      <DependentUpon>MaterailsStock_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_Confirm.aspx.designer.cs">
+      <DependentUpon>MaterailsStock_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_FinalConfirm.aspx.cs">
+      <DependentUpon>MaterailsStock_FinalConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_FinalConfirm.aspx.designer.cs">
+      <DependentUpon>MaterailsStock_FinalConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_KeyIn.aspx.cs">
+      <DependentUpon>MaterailsStock_KeyIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_KeyIn.aspx.designer.cs">
+      <DependentUpon>MaterailsStock_KeyIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_KeyInNoData.aspx.cs">
+      <DependentUpon>MaterailsStock_KeyInNoData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterailsManager\MaterailsStock_KeyInNoData.aspx.designer.cs">
+      <DependentUpon>MaterailsStock_KeyInNoData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterailsPriceManager\MaterailsPrice_Detail.aspx.cs">
+      <DependentUpon>MaterailsPrice_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterailsPriceManager\MaterailsPrice_Detail.aspx.designer.cs">
+      <DependentUpon>MaterailsPrice_Detail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterailsPriceManager\MaterailsPrice_index.aspx.cs">
+      <DependentUpon>MaterailsPrice_index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterailsPriceManager\MaterailsPrice_index.aspx.designer.cs">
+      <DependentUpon>MaterailsPrice_index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialControlManager\BarcodeChk.aspx.cs">
+      <DependentUpon>BarcodeChk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialControlManager\BarcodeChk.aspx.designer.cs">
+      <DependentUpon>BarcodeChk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialControlManager\BarcodRecords.aspx.cs">
+      <DependentUpon>BarcodRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialControlManager\BarcodRecords.aspx.designer.cs">
+      <DependentUpon>BarcodRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialControlManager\BarcodRecordsExport.aspx.cs">
+      <DependentUpon>BarcodRecordsExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialControlManager\BarcodRecordsExport.aspx.designer.cs">
+      <DependentUpon>BarcodRecordsExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialControlManager\GetBarcod.aspx.cs">
+      <DependentUpon>GetBarcod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialControlManager\GetBarcod.aspx.designer.cs">
+      <DependentUpon>GetBarcod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialControlManager\Material_Control_OperateForm.aspx.cs">
+      <DependentUpon>Material_Control_OperateForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialControlManager\Material_Control_OperateForm.aspx.designer.cs">
+      <DependentUpon>Material_Control_OperateForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialControlManager\Stock_out_page.aspx.cs">
+      <DependentUpon>Stock_out_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialControlManager\Stock_out_page.aspx.designer.cs">
+      <DependentUpon>Stock_out_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialForecastManager\ForecastInput.aspx.cs">
+      <DependentUpon>ForecastInput.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialForecastManager\ForecastInput.aspx.designer.cs">
+      <DependentUpon>ForecastInput.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialForecastManager\MaterialForecast_Purchasing.aspx.cs">
+      <DependentUpon>MaterialForecast_Purchasing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaterialForecastManager\MaterialForecast_Purchasing.aspx.designer.cs">
+      <DependentUpon>MaterialForecast_Purchasing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MaterialForecastManager\MData.ashx.cs">
+      <DependentUpon>MData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsApply\M_materails_Apply_Confirm.aspx.cs">
+      <DependentUpon>M_materails_Apply_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsApply\M_materails_Apply_Confirm.aspx.designer.cs">
+      <DependentUpon>M_materails_Apply_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsApply\M_materails_Apply_Form.aspx.cs">
+      <DependentUpon>M_materails_Apply_Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsApply\M_materails_Apply_Form.aspx.designer.cs">
+      <DependentUpon>M_materails_Apply_Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsManager\M_materails_Add.aspx.cs">
+      <DependentUpon>M_materails_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsManager\M_materails_Add.aspx.designer.cs">
+      <DependentUpon>M_materails_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsManager\M_materails_Edit.aspx.cs">
+      <DependentUpon>M_materails_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsManager\M_materails_Edit.aspx.designer.cs">
+      <DependentUpon>M_materails_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsManager\M_materails_List.aspx.cs">
+      <DependentUpon>M_materails_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsManager\M_materails_List.aspx.designer.cs">
+      <DependentUpon>M_materails_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsOrder\M_materails_OrderList.aspx.cs">
+      <DependentUpon>M_materails_OrderList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsOrder\M_materails_OrderList.aspx.designer.cs">
+      <DependentUpon>M_materails_OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsOrder\M_materails_OrderPurchase.aspx.cs">
+      <DependentUpon>M_materails_OrderPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsOrder\M_materails_OrderPurchase.aspx.designer.cs">
+      <DependentUpon>M_materails_OrderPurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockIn\M_materails_StockIn.aspx.cs">
+      <DependentUpon>M_materails_StockIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockIn\M_materails_StockIn.aspx.designer.cs">
+      <DependentUpon>M_materails_StockIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockIn\M_materails_StockIn_Confirm.aspx.cs">
+      <DependentUpon>M_materails_StockIn_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockIn\M_materails_StockIn_Confirm.aspx.designer.cs">
+      <DependentUpon>M_materails_StockIn_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockIn\M_materails_StockIn_List.aspx.cs">
+      <DependentUpon>M_materails_StockIn_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockIn\M_materails_StockIn_List.aspx.designer.cs">
+      <DependentUpon>M_materails_StockIn_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockOut\M_materails_StockOut.aspx.cs">
+      <DependentUpon>M_materails_StockOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockOut\M_materails_StockOut.aspx.designer.cs">
+      <DependentUpon>M_materails_StockOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockOut\M_materails_StockOut_Confirm.aspx.cs">
+      <DependentUpon>M_materails_StockOut_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockOut\M_materails_StockOut_Confirm.aspx.designer.cs">
+      <DependentUpon>M_materails_StockOut_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockOut\M_materails_StockOut_List.aspx.cs">
+      <DependentUpon>M_materails_StockOut_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MoldManager\M_materailsStockOut\M_materails_StockOut_List.aspx.designer.cs">
+      <DependentUpon>M_materails_StockOut_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\getMode.ashx.cs">
+      <DependentUpon>getMode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Add_Type.aspx.cs">
+      <DependentUpon>Mode_Add_Type.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Add_Type.aspx.designer.cs">
+      <DependentUpon>Mode_Add_Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Index.aspx.cs">
+      <DependentUpon>Mode_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Index.aspx.designer.cs">
+      <DependentUpon>Mode_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_List.aspx.cs">
+      <DependentUpon>Mode_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_List.aspx.designer.cs">
+      <DependentUpon>Mode_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Modify.aspx.cs">
+      <DependentUpon>Mode_Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Modify.aspx.designer.cs">
+      <DependentUpon>Mode_Modify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Recipt_Data.aspx.cs">
+      <DependentUpon>Mode_Recipt_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_Recipt_Data.aspx.designer.cs">
+      <DependentUpon>Mode_Recipt_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_SetRate.aspx.cs">
+      <DependentUpon>Mode_SetRate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mold_Management_Accounting\Mode_SetRate.aspx.designer.cs">
+      <DependentUpon>Mode_SetRate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="p\2d1f_c.aspx.cs">
+      <DependentUpon>2d1f_c.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p\2d1f_c.aspx.designer.cs">
+      <DependentUpon>2d1f_c.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserManager\User_Add.aspx.cs">
+      <DependentUpon>User_Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserManager\User_Add.aspx.designer.cs">
+      <DependentUpon>User_Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vender_add.aspx.cs">
+      <DependentUpon>Vender_add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vender_add.aspx.designer.cs">
+      <DependentUpon>Vender_add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vender_DeletedItems.aspx.cs">
+      <DependentUpon>Vender_DeletedItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vender_DeletedItems.aspx.designer.cs">
+      <DependentUpon>Vender_DeletedItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vender_Edit.aspx.cs">
+      <DependentUpon>Vender_Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vender_Edit.aspx.designer.cs">
+      <DependentUpon>Vender_Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vendor_List.aspx.cs">
+      <DependentUpon>Vendor_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vendor_List.aspx.designer.cs">
+      <DependentUpon>Vendor_List.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="aspnet_client\system_web\4_0_30319\" />
+    <Folder Include="image\" />
+    <Folder Include="obj\Debug\en-us\" />
+    <Folder Include="obj\Debug\Package\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DownLoadFile\Engineering_inspection_sheet.xls" />
+    <None Include="DownLoadFile\部品上传模板.xls" />
+    <Content Include="GoodsManager\GoodsData.ashx" />
+    <None Include="Goods_Ito\Create.xls" />
+    <None Include="Images\qqface\Desktop_2.ini" />
+    <None Include="Images\qqface\_desktop.ini" />
+    <None Include="Images\qq\Desktop_2.ini" />
+    <None Include="Images\qq\skin\10\Desktop_2.ini" />
+    <None Include="Images\qq\skin\10\_desktop.ini" />
+    <None Include="Images\qq\skin\11\Desktop_2.ini" />
+    <None Include="Images\qq\skin\11\_desktop.ini" />
+    <None Include="Images\qq\skin\12\Desktop_2.ini" />
+    <None Include="Images\qq\skin\12\_desktop.ini" />
+    <None Include="Images\qq\skin\1\Desktop_2.ini" />
+    <None Include="Images\qq\skin\1\_desktop.ini" />
+    <None Include="Images\qq\skin\2\Desktop_2.ini" />
+    <None Include="Images\qq\skin\2\_desktop.ini" />
+    <None Include="Images\qq\skin\3\Desktop_2.ini" />
+    <None Include="Images\qq\skin\3\_desktop.ini" />
+    <None Include="Images\qq\skin\4\Desktop_2.ini" />
+    <None Include="Images\qq\skin\4\_desktop.ini" />
+    <None Include="Images\qq\skin\5\Desktop_2.ini" />
+    <None Include="Images\qq\skin\5\_desktop.ini" />
+    <None Include="Images\qq\skin\6\Desktop_2.ini" />
+    <None Include="Images\qq\skin\6\_desktop.ini" />
+    <None Include="Images\qq\skin\7\Desktop_2.ini" />
+    <None Include="Images\qq\skin\7\_desktop.ini" />
+    <None Include="Images\qq\skin\8\Desktop_2.ini" />
+    <None Include="Images\qq\skin\8\_desktop.ini" />
+    <None Include="Images\qq\skin\9\Desktop_2.ini" />
+    <None Include="Images\qq\skin\9\_desktop.ini" />
+    <None Include="Images\qq\skin\Desktop_2.ini" />
+    <None Include="Images\qq\skin\_desktop.ini" />
+    <None Include="Images\qq\_desktop.ini" />
+    <None Include="Images\_notes\Desktop_2.ini" />
+    <None Include="Images\_notes\_desktop.ini" />
+    <None Include="InventoryManager\Create.xls" />
+    <None Include="MaintenanceRecords\Create.xls" />
+    <Content Include="MaintenanceRecords\EquipData.ashx" />
+    <None Include="MaterailsManager\Create.xls" />
+    <None Include="MaterialControlManager\Create.xls" />
+    <None Include="MaterialForecastManager\Create.xls" />
+    <Content Include="MaterialForecastManager\MData.ashx" />
+    <Content Include="Mold_Management_Accounting\getMode.ashx" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\ERPPlugIn.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\ERPPlugIn.csprojResolveAssemblyReference.cache" />
+    <None Include="UploadExcel\Book1.xls" />
+    <None Include="UploadExcel\Book2.xls" />
+    <None Include="UploadExcel\Book3.xls" />
+    <None Include="UploadExcel\副本测试数据.xls" />
+    <None Include="UploadExcel\新建 Microsoft Excel 工作表.xls" />
+    <None Include="UploadFile\GD2015100823215.pdf" />
+    <None Include="UploadFile\GD2015100923366.pdf" />
+    <None Include="UploadPics\Fix2015101524650.pdf" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.en-us.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.en-us.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.designer.cs</LastGenOutput>
+    </Content>
+    <Content Include="App_GlobalResources\Resource.th-th.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.th-th.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50646</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
