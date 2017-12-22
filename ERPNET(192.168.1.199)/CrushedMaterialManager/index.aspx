@@ -1,10 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="index" Codebehind="index.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="ERPPlugIn.CrushedMaterialManager.index"
+    CodeBehind="index.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <script src= "../Scripts/jquery-1.4.1.js" type="text/javascript" language="javascript">   </script>
+    <script src="../Scripts/jquery-1.4.1.js" type="text/javascript" language="javascript">   </script>
     <script type="text/javascript" language="javascript">
 
 
@@ -21,7 +22,6 @@
         });
     </script>
     <style type="text/css">
-              
         .hidden
         {
             display: none;
@@ -33,29 +33,26 @@
     <form id="form1" runat="server">
     <asp:HyperLink ID="HyperLinkBack" runat="server" NavigateUrl="insert.aspx">返回插入页面</asp:HyperLink>
     <div style="width: 120%;">
-        <asp:DropDownList ID="DropDownListArea" runat="server" 
-            OnSelectedIndexChanged="DropDownListArea_SelectedIndexChanged" AutoPostBack="True">
+        <asp:DropDownList ID="DropDownListArea" runat="server" OnSelectedIndexChanged="DropDownListArea_SelectedIndexChanged"
+            AutoPostBack="True">
         </asp:DropDownList>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound"
-             style="margin-bottom: 27px" >
+            Style="margin-bottom: 27px">
             <Columns>
                 <asp:TemplateField HeaderText="采购确认">
-                    <ItemTemplate>                        
-                                          
+                    <ItemTemplate>
                         <asp:Label ID="lblBudget" runat="server" Visible="false"></asp:Label>
                     </ItemTemplate>
                     <ItemStyle Width="90px" />
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="生管确认">
                     <ItemTemplate>
-                                                                     
                         <asp:Label ID="lblPMC" runat="server" Visible="false"></asp:Label>
                     </ItemTemplate>
                     <ItemStyle Width="90px" />
                 </asp:TemplateField>
                 <asp:TemplateField HeaderText="主管确认">
-                    <ItemTemplate>                        
-                                          
+                    <ItemTemplate>
                         <asp:Label ID="lblLeader" runat="server" Visible="false"></asp:Label>
                     </ItemTemplate>
                     <ItemStyle Width="90px" />
@@ -87,34 +84,33 @@
                     <ItemStyle Width="90px" />
                 </asp:BoundField>
                 <asp:BoundField HeaderText="生产日期" DataField="produceTime">
-                    <ItemStyle Width="90px" />                    
+                    <ItemStyle Width="90px" />
                 </asp:BoundField>
-                 <asp:BoundField HeaderText="录入时间" DataField="inputTime">
-                <ItemStyle Width="90px" />
-            </asp:BoundField>
-                <asp:BoundField HeaderText="作业员" DataField="eployeeName">
+                <asp:BoundField HeaderText="录入时间" DataField="inputTime">
+                    <ItemStyle Width="90px" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="作业员" DataField="employeeName">
                     <ItemStyle Width="90px" />
                 </asp:BoundField>
                 <asp:TemplateField HeaderText="编辑">
                     <ItemTemplate>
                         <asp:HyperLink ID="hlinkedit" runat="server"></asp:HyperLink>
                     </ItemTemplate>
-                </asp:TemplateField>                    
+                </asp:TemplateField>
                 <asp:TemplateField HeaderText="删除">
                     <ItemTemplate>
                         <asp:HyperLink ID="hlinkdelete" runat="server"></asp:HyperLink>
-                     </ItemTemplate>
+                    </ItemTemplate>
                 </asp:TemplateField>
-              
             </Columns>
         </asp:GridView>
     </div>
-    <asp:Label ID="LabelMoney" runat="server" Text="Label" ></asp:Label>
+    <asp:Label ID="LabelMoney" runat="server" Text="Label"></asp:Label>
     <asp:Button ID="ButtonCEO" runat="server" Text="总经理承认" Visible="false" OnClick="ButtonCEO_Click" />
-    <asp:Button ID="ButtonManager" runat="server" Text="经理承认" Visible="false" OnClick="Buttonmanager_Click" />   
-    <asp:Button ID="ButtonPurchase" runat="server" Text="采购确认" onclick="ButtonPurchase_Click" />
-    <asp:Button ID="ButtonPMC" runat="server" Text="生管确认" onclick="ButtonPMC_Click" />
-    <asp:Button ID="Buttondirector" runat="server" Text="主管确认" onclick="Buttondirector_Click" />
+    <asp:Button ID="ButtonManager" runat="server" Text="经理承认" Visible="false" OnClick="Buttonmanager_Click" />
+    <asp:Button ID="ButtonPurchase" runat="server" Text="采购确认" OnClick="ButtonPurchase_Click" />
+    <asp:Button ID="ButtonPMC" runat="server" Text="生管确认" OnClick="ButtonPMC_Click" />
+    <asp:Button ID="Buttondirector" runat="server" Text="主管确认" OnClick="Buttondirector_Click" />
     </form>
 </body>
 </html>

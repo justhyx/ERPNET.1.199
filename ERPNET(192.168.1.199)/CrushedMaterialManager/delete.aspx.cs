@@ -5,29 +5,33 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using HUDSON.ERP.DBCommandDAL.SQLServerClient;
-public partial class delete : System.Web.UI.Page
+
+namespace ERPPlugIn.CrushedMaterialManager
 {
-    protected void Page_Load(object sender, EventArgs e)
+    public partial class delete : System.Web.UI.Page
     {
-        int id = Convert.ToInt32(Request.QueryString["id"]);
-        if (id == 0)
+        protected void Page_Load(object sender, EventArgs e)
         {
-            Response.Redirect("index.aspx");
+            int id = Convert.ToInt32(Request.QueryString["id"]);
+            if (id == 0)
+            {
+                Response.Redirect("index.aspx");
+            }
         }
-    }
-    protected void ButtonDelete_Click(object sender, EventArgs e)
-    {
-        if (TextBoxPwd.Text.Equals("123456"))
+        protected void ButtonDelete_Click(object sender, EventArgs e)
         {
-            string id = Request.QueryString["id"];
-            DeleteCommandBuilder dcb = new DeleteCommandBuilder();
-            string sql = "delete  from shatter_Parts where id = " + id + "";
-            dcb.ExecuteNonQuery(sql);
-            Response.Redirect("index.aspx");
-        }
-        else
-        {
-            Response.Write("<script>alert('密码不正确')</script>");
+            if (TextBoxPwd.Text.Equals("123456"))
+            {
+                string id = Request.QueryString["id"];
+                DeleteCommandBuilder dcb = new DeleteCommandBuilder();
+                string sql = "delete  from shatter_Parts where id = " + id + "";
+                dcb.ExecuteNonQuery(sql);
+                Response.Redirect("index.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('密码不正确')</script>");
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="query" Codebehind="query.aspx.cs" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" Inherits="ERPPlugIn.CrushedMaterialManager.query" Codebehind="query.aspx.cs" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -103,7 +103,7 @@
             <asp:BoundField HeaderText="录入时间" DataField="inputTime">
                 <ItemStyle Width="90px" />
             </asp:BoundField>
-            <asp:BoundField HeaderText="作业员" DataField="eployeeName" />            
+            <asp:BoundField HeaderText="作业员" DataField="employeeName" />            
             <asp:BoundField HeaderText="不良发生区" DataField="produceArea" />
         </Columns>
     </asp:GridView>
