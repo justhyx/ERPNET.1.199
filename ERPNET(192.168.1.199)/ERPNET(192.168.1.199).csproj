@@ -46,6 +46,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Xml.Linq" />
@@ -62,6 +63,13 @@
   <ItemGroup>
     <Content Include="CrushedMaterialManager\CrushedMaterial_Approved.aspx" />
     <Content Include="CrushedMaterialManager\CrushedMaterial_List.aspx" />
+    <Content Include="CrushedMaterialManager\delete.aspx" />
+    <Content Include="CrushedMaterialManager\edit.aspx" />
+    <Content Include="CrushedMaterialManager\getSure.aspx" />
+    <Content Include="CrushedMaterialManager\index.aspx" />
+    <Content Include="CrushedMaterialManager\insert.aspx" />
+    <Content Include="CrushedMaterialManager\print.aspx" />
+    <Content Include="CrushedMaterialManager\query.aspx" />
     <Content Include="css\css.css" />
     <Content Include="css\css_p.css" />
     <Content Include="css\ie6.css" />
@@ -487,6 +495,29 @@
     <Content Include="right.html" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="StockInManager\StockIn_AddData.aspx" />
+    <Content Include="StockInManager\StockIn_AddDictateData.aspx" />
+    <Content Include="StockInManager\StockIn_Confirm.aspx" />
+    <Content Include="StockInManager\StockIn_ConfirmList.aspx" />
+    <Content Include="StockInManager\StockIn_Create.aspx" />
+    <Content Include="StockInManager\StockIn_Index.aspx" />
+    <Content Include="StockInManager\StockIn_SaveOk.aspx" />
+    <Content Include="StockInManager\StockOutCreate.aspx" />
+    <Content Include="StockInManager\StockOut_AddData.aspx" />
+    <Content Include="StockInManager\StockOut_Confirm.aspx" />
+    <Content Include="StockInManager\StockOut_ConfirmList.aspx" />
+    <Content Include="StockInManager\str_stock_img\b_frst.gif" />
+    <Content Include="StockInManager\str_stock_img\down_lin.gif" />
+    <Content Include="StockInManager\str_stock_img\search.gif" />
+    <Content Include="StockInManager\str_stock_img\str_in_auditer.gif" />
+    <Content Include="StockInManager\str_stock_img\str_in_do.gif" />
+    <Content Include="StockInManager\str_stock_img\str_out_audit.gif" />
+    <Content Include="StockInManager\str_stock_img\str_out_do.gif" />
+    <Content Include="StockInManager\str_stock_img\str_pd.gif" />
+    <Content Include="StockManager\PrintPage.htm" />
+    <Content Include="StockManager\Stock_Input.aspx" />
+    <Content Include="StockManager\Stock_Output.aspx" />
+    <Content Include="StockManager\Stock_Output_Detail.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
@@ -538,6 +569,55 @@
     </Compile>
     <Compile Include="CrushedMaterialManager\CrushedMaterial_List.aspx.designer.cs">
       <DependentUpon>CrushedMaterial_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\getSure.aspx.cs">
+      <DependentUpon>getSure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\getSure.aspx.designer.cs">
+      <DependentUpon>getSure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\insert.aspx.cs">
+      <DependentUpon>insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\insert.aspx.designer.cs">
+      <DependentUpon>insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\print.aspx.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\print.aspx.designer.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\query.aspx.cs">
+      <DependentUpon>query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\query.aspx.designer.cs">
+      <DependentUpon>query.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equip\Datatable.cs" />
     <Compile Include="Equip\equip_detail.aspx.cs">
@@ -983,6 +1063,107 @@
     <Compile Include="p\2d1f_c.aspx.designer.cs">
       <DependentUpon>2d1f_c.aspx</DependentUpon>
     </Compile>
+    <Compile Include="StockInManager\StockIn_AddData.aspx.cs">
+      <DependentUpon>StockIn_AddData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_AddData.aspx.designer.cs">
+      <DependentUpon>StockIn_AddData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_AddDictateData.aspx.cs">
+      <DependentUpon>StockIn_AddDictateData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_AddDictateData.aspx.designer.cs">
+      <DependentUpon>StockIn_AddDictateData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_Confirm.aspx.cs">
+      <DependentUpon>StockIn_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_Confirm.aspx.designer.cs">
+      <DependentUpon>StockIn_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_ConfirmList.aspx.cs">
+      <DependentUpon>StockIn_ConfirmList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_ConfirmList.aspx.designer.cs">
+      <DependentUpon>StockIn_ConfirmList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_Create.aspx.cs">
+      <DependentUpon>StockIn_Create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_Create.aspx.designer.cs">
+      <DependentUpon>StockIn_Create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_GoodsData.ashx.cs">
+      <DependentUpon>StockIn_GoodsData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_Index.aspx.cs">
+      <DependentUpon>StockIn_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_Index.aspx.designer.cs">
+      <DependentUpon>StockIn_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_SaveOk.aspx.cs">
+      <DependentUpon>StockIn_SaveOk.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockIn_SaveOk.aspx.designer.cs">
+      <DependentUpon>StockIn_SaveOk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockOutCreate.aspx.cs">
+      <DependentUpon>StockOutCreate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockOutCreate.aspx.designer.cs">
+      <DependentUpon>StockOutCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockOut_AddData.aspx.cs">
+      <DependentUpon>StockOut_AddData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockOut_AddData.aspx.designer.cs">
+      <DependentUpon>StockOut_AddData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockOut_Confirm.aspx.cs">
+      <DependentUpon>StockOut_Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockOut_Confirm.aspx.designer.cs">
+      <DependentUpon>StockOut_Confirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockInManager\StockOut_ConfirmList.aspx.cs">
+      <DependentUpon>StockOut_ConfirmList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockInManager\StockOut_ConfirmList.aspx.designer.cs">
+      <DependentUpon>StockOut_ConfirmList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockManager\Stock_Input.aspx.cs">
+      <DependentUpon>Stock_Input.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockManager\Stock_Input.aspx.designer.cs">
+      <DependentUpon>Stock_Input.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockManager\Stock_Output.aspx.cs">
+      <DependentUpon>Stock_Output.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockManager\Stock_Output.aspx.designer.cs">
+      <DependentUpon>Stock_Output.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="StockManager\Stock_Output_Detail.aspx.cs">
+      <DependentUpon>Stock_Output_Detail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StockManager\Stock_Output_Detail.aspx.designer.cs">
+      <DependentUpon>Stock_Output_Detail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserManager\User_Add.aspx.cs">
       <DependentUpon>User_Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1076,6 +1257,8 @@
     <None Include="obj\Debug\ERPPlugIn.csprojResolveAssemblyReference.cache" />
     <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Release\ERPPlugIn.csprojResolveAssemblyReference.cache" />
+    <Content Include="StockInManager\StockIn_GoodsData.ashx" />
+    <None Include="StockManager\Create.xls" />
     <None Include="UploadExcel\Book1.xls" />
     <None Include="UploadExcel\Book2.xls" />
     <None Include="UploadExcel\Book3.xls" />
@@ -1084,7 +1267,9 @@
     <None Include="UploadFile\GD2015100823215.pdf" />
     <None Include="UploadFile\GD2015100923366.pdf" />
     <None Include="UploadPics\Fix2015101524650.pdf" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
