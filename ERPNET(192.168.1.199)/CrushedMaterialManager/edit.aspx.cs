@@ -42,16 +42,10 @@ namespace ERPPlugIn.CrushedMaterialManager
             string produceTime = string.IsNullOrWhiteSpace(TextproduceTime.Text.Trim()) ? "null" : "'" + TextproduceTime.Text.Trim() + "'";
             string employeeName = TextemployeeName.Text;
             string produceArea = DropDownListproduceArea.Value;
-            string sqlgetGoodsName = "select goods_name from goods where goods_name= '" + goodsName + "'";
+           
 
             UpdateCommandBuilder ucd = new UpdateCommandBuilder();
-            if (cmd.ExecuteScalar(sqlgetGoodsName) == null)
-            {
-                Response.Write("<script>alert('部番输入有错误')</script>");
-            }
-            else
-            {
-
+           
                 string sqlgetPrice = @" select new_price from goods where goods_name='" + goodsName + "'";
                 //string sqlspec = @" select spec from goods where goods_name='" + goodsName + "'";
                 Debug.WriteLine(sqlgetPrice);
@@ -79,7 +73,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                 ucd.ExecuteNonQuery(sql);
 
                 Response.Redirect("index.aspx");
-            }
+           
         }
         protected void ButtonBack_Click(object sender, EventArgs e)
         {

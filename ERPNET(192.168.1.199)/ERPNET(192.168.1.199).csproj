@@ -619,6 +619,9 @@
     <Compile Include="CrushedMaterialManager\query.aspx.designer.cs">
       <DependentUpon>query.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CrushedMaterialManager\ServerData.ashx.cs">
+      <DependentUpon>ServerData.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Equip\Datatable.cs" />
     <Compile Include="Equip\equip_detail.aspx.cs">
       <DependentUpon>equip_detail.aspx</DependentUpon>
@@ -1208,6 +1211,7 @@
     <Folder Include="obj\Debug\Package\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CrushedMaterialManager\ServerData.ashx" />
     <None Include="DownLoadFile\Engineering_inspection_sheet.xls" />
     <None Include="DownLoadFile\部品上传模板.xls" />
     <Content Include="GoodsManager\GoodsData.ashx" />

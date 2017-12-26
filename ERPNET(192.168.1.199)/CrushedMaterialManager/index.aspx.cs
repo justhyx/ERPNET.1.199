@@ -13,7 +13,7 @@ namespace ERPPlugIn.CrushedMaterialManager
     {
 
         SelectCommandBuilder cmd = new SelectCommandBuilder();
-        UpdateCommandBuilder ucd = new UpdateCommandBuilder();
+
         string sqlquery = @"select ID,goodsName,count ,price , moneySum ,ISNULL(CONVERT(nvarchar(10),  inputTime,126),'') as inputTime,
                             badContent ,ISNULL( CONVERT(nvarchar(10),  produceTime,126),'') as produceTime,employeeName ,spec,produceArea,                                                       
                             CONVERT(nvarchar(10),  purchaseConfirm,126) as purchaseConfirm,
@@ -122,17 +122,34 @@ namespace ERPPlugIn.CrushedMaterialManager
         //承认点击
         protected void ButtonCEO_Click(object sender, EventArgs e)
         {
-            //1代表总经理，2代表经理
-            string manager = "CEO";
-            string produceArea = DropDownListArea.SelectedValue;
+            RedirectGetSure(getSure.role_CEO);
 
-            Response.Redirect("getSure.aspx?manager=" + manager + "&produceArea=" + produceArea + "");
         }
         protected void Buttonmanager_Click(object sender, EventArgs e)
         {
-            string manager = "manager";
-            string produceArea = DropDownListArea.SelectedValue;
-            Response.Redirect("getSure.aspx?manager=" + manager + "&produceArea=" + produceArea + "");
+            RedirectGetSure(getSure.role_manager);
+        }
+
+        //采购确认
+        protected void ButtonPurchase_Click(object sender, EventArgs e)
+        {
+            RedirectGetSure(getSure.role_purchase);
+
+        }
+        //生管确认
+        protected void ButtonPMC_Click(object sender, EventArgs e)
+        {
+            RedirectGetSure(getSure.role_PMC);
+        }
+        //主管确认
+        protected void Buttondirector_Click(object sender, EventArgs e)
+        {
+            RedirectGetSure(getSure.role_director);
+        }
+
+        void RedirectGetSure(string userkey)
+        {
+            Response.Redirect("getSure.aspx?userkey=" + userkey + "&produceArea=" + DropDownListArea.SelectedValue + "");
         }
 
         protected void DropDownListArea_SelectedIndexChanged(object sender, EventArgs e)
@@ -174,71 +191,8 @@ namespace ERPPlugIn.CrushedMaterialManager
             {
                 ButtonCEO.Visible = true;
             }
-
-
-
         }
 
 
-        static string getAdmit(string people, string Area)
-        {
-            return string.Format(@"update shatter_Parts set {0} = getDate()
-                          where ({1}) and (topManagerConfirm is null and managerConfirm is null)"
-                            , people, Area);
-        }
-
-        //采购确认
-        protected void ButtonPurchase_Click(object sender, EventArgs e)
-        {
-            string produceArea = DropDownListArea.SelectedValue;
-            string Area = produceArea == "客户退货不良品" ? Area1 : Area2;
-            string people = "purchaseConfirm";
-            string sql = getAdmit(people, Area);
-
-            ucd.ExecuteNonQuery(sql);
-            string sqlselect = string.Format(sqlquery, Area);
-            Debug.WriteLine(sqlselect);
-            DataTable dt = new DataTable();
-            dt = cmd.ExecuteDataTable(sqlselect);
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-
-
-        }
-        //生管确认
-        protected void ButtonPMC_Click(object sender, EventArgs e)
-        {
-            string produceArea = DropDownListArea.SelectedValue;
-            string Area = produceArea == "客户退货不良品" ? Area1 : Area2;
-            string people = "PMCConfirm";
-            string sql = getAdmit(people, Area);
-
-
-            ucd.ExecuteNonQuery(sql);
-            string sqlselect = string.Format(sqlquery, Area);
-            Debug.WriteLine(sqlselect);
-            DataTable dt = new DataTable();
-            dt = cmd.ExecuteDataTable(sqlselect);
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-
-        }
-        //主管确认
-        protected void Buttondirector_Click(object sender, EventArgs e)
-        {
-            string produceArea = DropDownListArea.SelectedValue;
-            string Area = produceArea == "客户退货不良品" ? Area1 : Area2;
-            string people = "directorConfirm";
-            string sql = getAdmit(people, Area);
-
-
-            ucd.ExecuteNonQuery(sql);
-            string sqlselect = string.Format(sqlquery, Area);
-            Debug.WriteLine(sqlselect);
-            DataTable dt = new DataTable();
-            dt = cmd.ExecuteDataTable(sqlselect);
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-        }
     }
 }

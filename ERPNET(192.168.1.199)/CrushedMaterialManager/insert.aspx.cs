@@ -27,22 +27,14 @@ namespace ERPPlugIn.CrushedMaterialManager
             //获取需要的值
             string goodsName = (TextBoxgoodsName.Text).Trim();
             string count = TextBoxcount.Text;
-            string badcontent = TextBoxbadcontent.InnerText;
+            string badcontent = TextBoxbadcontent.Text;
             string produceTime = string.IsNullOrWhiteSpace(TextBoxproduceTime.Text.Trim()) ? "null" : "'" + TextBoxproduceTime.Text.Trim() + "'";
 
             string employeeName = TextBoxemployeeName.Text;
             string produceArea = DropDownListproduceArea.Value;
 
 
-
-            //判断输入的部番是否存在
-            string sqlgetGoodsName = "select goods_name from goods where goods_name= '" + goodsName + "'";
-            if (new SelectCommandBuilder().ExecuteScalar(sqlgetGoodsName) == null)
-            {
-                Response.Write("<script>alert('部番输入有错误')</script>");
-            }
-            else
-            {
+          
 
                 //根据输入的部番，查询出其他需要的数据
                 string sqlgetPrice = @" select new_price from goods where goods_name='" + goodsName + "'";
@@ -51,9 +43,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                 //string sqlys = @" select ys from goods where goods_name='" + goodsName + "'";
                 Debug.WriteLine(sqlgetPrice);
                 double price = 0;
-
-
-
+                
                 SqlDataReader dr = new SelectCommandBuilder().ExecuteReader(sqlgetPrice);
                 while (dr.Read())
                 {
@@ -61,15 +51,13 @@ namespace ERPPlugIn.CrushedMaterialManager
                 }
                 dr.Close();
                 double moneySum = price * double.Parse(count);
-                //string spec = (string)new SelectCommandBuilder().ExecuteScalar(sqlspec);
-                //string cz = (string)new SelectCommandBuilder().ExecuteScalar(sqlcz);
-                //string ys = (string)new SelectCommandBuilder().ExecuteScalar(sqlys);
+          
 
                 //插入数据           
 
                 string sqlinsert = @"insert into 
                             shatter_Parts(goodsName,count,price,moneySum,badContent,produceTime,employeeName,produceArea,inputTime)
-                            values('" + goodsName + "','" + count + "','" + price + "','" + moneySum + "','" + badcontent
+                            values('" + goodsName + "'," + count + "," + price + "," + moneySum + ",'" + badcontent
                                                + "'," + produceTime + ",'" + employeeName + "','" + produceArea
                                               + "',getDate())";
                 Debug.WriteLine(sqlinsert);
@@ -77,9 +65,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                 //把数据库自动生成的时间改为""
                 Response.Redirect("index.aspx");
             }
-
-
-        }
+        
 
         protected void Button2_Click(object sender, EventArgs e)
         {
