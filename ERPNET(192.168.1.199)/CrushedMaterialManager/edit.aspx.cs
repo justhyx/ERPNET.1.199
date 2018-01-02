@@ -62,8 +62,8 @@ namespace ERPPlugIn.CrushedMaterialManager
                 //string spec = (string)cmd.ExecuteScalar(sqlspec);
 
 
-                string sql = @"update shatter_Parts set
-                              goodsName='" + goodsName + "',count='" + count + "',price='" +
+                string sql = @"update shatter_Parts 
+set goodsName='" + goodsName + "',count='" + count + "',price='" +
                                            price + "',moneySum='" + moneySum + "',badContent='"
                                            + badcontent + "',produceTime=" + produceTime + ",employeeName='" +
                                            employeeName + "',produceArea='" +
