@@ -147,6 +147,7 @@
             </tr>
         </table>
     </div>    
+    <asp:HiddenField ID="HiddenField1" runat="server" />
     </form>
 </body>
 </html>
