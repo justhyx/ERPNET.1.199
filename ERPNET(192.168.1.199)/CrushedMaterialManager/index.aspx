@@ -7,19 +7,7 @@
     <title></title>
     <script src="../Scripts/jquery-1.4.1.js" type="text/javascript" language="javascript">   </script>
     <script type="text/javascript" language="javascript">
-
-
-
-        $(document).ready(function () {
-            $(".delete").click(function () {
-                var msg = "\n\n确认删除！";
-                if (confirm(msg) == true) {
-                    return true;
-                } else {
-                    return false;
-                }
-            });
-        });
+ 
     </script>
     <style type="text/css">
         .hidden
@@ -43,8 +31,13 @@
             AutoPostBack="True">
         </asp:DropDownList>
      <asp:Label ID="LabelMoney" runat="server" Text="Label"></asp:Label>
-            <asp:Button ID="buttonConfirm" runat="server" Visible="false" onclick="buttonConfirm_Click" 
-            />
+        <asp:Button ID="Button1" runat="server" Text="品质审核" onclick="Button1_Click" />
+        <asp:Button ID="Button2" runat="server" Text="生管审核" onclick="Button2_Click"  />
+        <asp:Button ID="Button3" runat="server" Text="采购审核" onclick="Button3_Click" />
+        <asp:Button ID="Button4" runat="server" Text="成型审核" onclick="Button4_Click"  Enabled="false"/>
+        <asp:Button ID="Button5" runat="server" Text="总经理审核" onclick="Button5_Click" Enabled="false"/>
+           <%-- <asp:Button ID="buttonConfirm" runat="server" Visible="false" onclick="buttonConfirm_Click" 
+            />--%>
         
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound"
             Style="margin-bottom: 27px">

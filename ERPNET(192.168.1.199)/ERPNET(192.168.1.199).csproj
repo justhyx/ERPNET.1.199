@@ -62,6 +62,13 @@
   <ItemGroup>
     <Content Include="CrushedMaterialManager\CrushedMaterial_Approved.aspx" />
     <Content Include="CrushedMaterialManager\CrushedMaterial_List.aspx" />
+    <Content Include="CrushedMaterialManager\delete.aspx" />
+    <Content Include="CrushedMaterialManager\edit.aspx" />
+    <Content Include="CrushedMaterialManager\index.aspx" />
+    <Content Include="CrushedMaterialManager\insert.aspx" />
+    <Content Include="CrushedMaterialManager\print.aspx" />
+    <Content Include="CrushedMaterialManager\query.aspx" />
+    <Content Include="CrushedMaterialManager\UserManage.aspx" />
     <Content Include="css\css.css" />
     <Content Include="css\css_p.css" />
     <Content Include="css\ie6.css" />
@@ -538,6 +545,58 @@
     </Compile>
     <Compile Include="CrushedMaterialManager\CrushedMaterial_List.aspx.designer.cs">
       <DependentUpon>CrushedMaterial_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\delete.aspx.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\delete.aspx.designer.cs">
+      <DependentUpon>delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\insert.aspx.cs">
+      <DependentUpon>insert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\insert.aspx.designer.cs">
+      <DependentUpon>insert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\print.aspx.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\print.aspx.designer.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\query.aspx.cs">
+      <DependentUpon>query.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\query.aspx.designer.cs">
+      <DependentUpon>query.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\ServerData.ashx.cs">
+      <DependentUpon>ServerData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\UserManage.aspx.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\UserManage.aspx.designer.cs">
+      <DependentUpon>UserManage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equip\Datatable.cs" />
     <Compile Include="Equip\equip_detail.aspx.cs">
@@ -1027,6 +1086,7 @@
     <Folder Include="obj\Debug\Package\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CrushedMaterialManager\ServerData.ashx" />
     <None Include="DownLoadFile\Engineering_inspection_sheet.xls" />
     <None Include="DownLoadFile\部品上传模板.xls" />
     <Content Include="GoodsManager\GoodsData.ashx" />
