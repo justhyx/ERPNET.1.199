@@ -63,6 +63,8 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AuthManger\AuthItemEdit.aspx" />
+    <Content Include="AuthManger\GaveAuth.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -574,6 +576,21 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.th-th.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthManger\AuthExtension.cs" />
+    <Compile Include="AuthManger\AuthItemEdit.aspx.cs">
+      <DependentUpon>AuthItemEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthManger\AuthItemEdit.aspx.designer.cs">
+      <DependentUpon>AuthItemEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AuthManger\GaveAuth.aspx.cs">
+      <DependentUpon>GaveAuth.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AuthManger\GaveAuth.aspx.designer.cs">
+      <DependentUpon>GaveAuth.aspx</DependentUpon>
     </Compile>
     <Compile Include="Class\ClassDES.cs" />
     <Compile Include="Class\CommadMethod.cs" />
