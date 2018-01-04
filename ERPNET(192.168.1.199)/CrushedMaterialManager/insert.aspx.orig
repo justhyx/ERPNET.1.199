@@ -37,6 +37,8 @@
             return false;
         }
     </script>
+<<<<<<< HEAD
+=======
        
     <script type="text/javascript" language="javascript">
 
@@ -53,6 +55,7 @@
             });
         });
     </script>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <style type="text/css">
         li
         {
@@ -82,6 +85,8 @@
         <ContentTemplate>
             <div id="div_first">
                 <table runat="server" style="" border="1" cellspacing="0" align="center">
+<<<<<<< HEAD
+=======
                 <tr>
                 <td></td>
                     <td>
@@ -93,6 +98,7 @@
                             ControlToValidate="RadioButtonList1" ErrorMessage="必须选择现场或者品检"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                     <tr>
                         <td class="" style="width: 120px;">
                             <span class="lbl">部番</span>
@@ -111,9 +117,12 @@
                             <asp:TextBox ID="TextBoxcount" class="inputControl" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBoxcount"
                                 ErrorMessage="输入不能为空"></asp:RequiredFieldValidator>
+<<<<<<< HEAD
+=======
                             <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
                                 ControlToValidate="TextBoxcount" ErrorMessage="只能输入数字" 
                                 ValidationExpression="^\+?[1-9][0-9]*$"></asp:RegularExpressionValidator>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                         </td>
                     </tr>
                     <tr>
@@ -167,6 +176,8 @@
                                 Text="返回" />
                         </td>
                     </tr>
+<<<<<<< HEAD
+=======
                     <tr>
                     <td></td>
                         <td style="text-align: center;">
@@ -175,6 +186,7 @@
                             <asp:Label ID="Label1" runat="server"></asp:Label>
                         </td>
                     </tr>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                 </table>
             </div>
         </ContentTemplate>

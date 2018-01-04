@@ -10,150 +10,170 @@
 namespace ERPPlugIn.CrushedMaterialManager {
     
     
-    public partial class edit {
+    public partial class index {
         
         /// <summary>
-        /// Head1 控件。
+<<<<<<< HEAD
+        /// HyperLinkSuccess 控件。
+=======
+        /// form1 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkSuccess;
         
         /// <summary>
         /// form1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
+=======
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ScriptManager1 控件。
+        /// HyperLinkSuccess 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+<<<<<<< HEAD
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+=======
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkSuccess;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         
         /// <summary>
-        /// UpdatePanel1 控件。
+        /// HyperLinkBack 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkBack;
         
         /// <summary>
-        /// TextgoodsName 控件。
+        /// DropDownListArea 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextgoodsName;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListArea;
         
         /// <summary>
-        /// RequiredFieldValidator1 控件。
+<<<<<<< HEAD
+        /// GridView1 控件。
+=======
+        /// LabelMoney 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// Textcount 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textcount;
+        /// LabelMoney 控件。
+=======
+        protected global::System.Web.UI.WebControls.Label LabelMoney;
         
         /// <summary>
-        /// RequiredFieldValidator2 控件。
+        /// Button1 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Label LabelMoney;
         
         /// <summary>
-        /// RegularExpressionValidator1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        /// ButtonCEO 控件。
+=======
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// Textbadcontent 控件。
+        /// Button2 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textbadcontent;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Button ButtonCEO;
         
         /// <summary>
-        /// RequiredFieldValidator3 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        /// ButtonManager 控件。
+=======
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// TextproduceTime 控件。
+        /// Button3 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextproduceTime;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Button ButtonManager;
         
         /// <summary>
-        /// TextemployeeName 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextemployeeName;
+        /// ButtonPurchase 控件。
+=======
+        protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
-        /// DropDownListproduceArea 控件。
+        /// Button4 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect DropDownListproduceArea;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Button ButtonPurchase;
         
         /// <summary>
-        /// ButtonOK 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonOK;
+        /// ButtonPMC 控件。
+=======
+        protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
-        /// ButtonBack 控件。
+        /// Button5 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonBack;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Button ButtonPMC;
+        
+        /// <summary>
+        /// Buttondirector 控件。
+=======
+        protected global::System.Web.UI.WebControls.Button Button5;
+        
+        /// <summary>
+        /// GridView1 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Button Buttondirector;
+=======
+        protected global::System.Web.UI.WebControls.GridView GridView1;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     }
 }

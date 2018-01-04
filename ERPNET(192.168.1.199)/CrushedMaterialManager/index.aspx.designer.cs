@@ -13,15 +13,6 @@ namespace ERPPlugIn.CrushedMaterialManager {
     public partial class index {
         
         /// <summary>
-        /// HyperLinkSuccess 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLinkSuccess;
-        
-        /// <summary>
         /// form1 控件。
         /// </summary>
         /// <remarks>
@@ -29,6 +20,15 @@ namespace ERPPlugIn.CrushedMaterialManager {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
+        /// <summary>
+        /// HyperLinkSuccess 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLinkSuccess;
         
         /// <summary>
         /// HyperLinkBack 控件。
@@ -49,15 +49,6 @@ namespace ERPPlugIn.CrushedMaterialManager {
         protected global::System.Web.UI.WebControls.DropDownList DropDownListArea;
         
         /// <summary>
-        /// GridView1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-        
-        /// <summary>
         /// LabelMoney 控件。
         /// </summary>
         /// <remarks>
@@ -67,48 +58,57 @@ namespace ERPPlugIn.CrushedMaterialManager {
         protected global::System.Web.UI.WebControls.Label LabelMoney;
         
         /// <summary>
-        /// ButtonCEO 控件。
+        /// Button1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonCEO;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// ButtonManager 控件。
+        /// Button2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonManager;
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// ButtonPurchase 控件。
+        /// Button3 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonPurchase;
+        protected global::System.Web.UI.WebControls.Button Button3;
         
         /// <summary>
-        /// ButtonPMC 控件。
+        /// Button4 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonPMC;
+        protected global::System.Web.UI.WebControls.Button Button4;
         
         /// <summary>
-        /// Buttondirector 控件。
+        /// Button5 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Buttondirector;
+        protected global::System.Web.UI.WebControls.Button Button5;
+        
+        /// <summary>
+        /// GridView1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

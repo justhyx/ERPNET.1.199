@@ -58,6 +58,14 @@ namespace ERPPlugIn.CrushedMaterialManager
                     }
                     dr.Close();
                 }
+<<<<<<< HEAD
+                double moneySum = price * double.Parse(count);
+                //string spec = (string)cmd.ExecuteScalar(sqlspec);
+
+
+                string sql = @"update shatter_Parts 
+set goodsName='" + goodsName + "',count='" + count + "',price='" +
+=======
                 string sqlExchange = @"select wb_hl from prd_dictate_wb inner join  goods
                                        on prd_dictate_wb.wb_name = goods.wb_name
                                        where goods.new_price=" + price + "";
@@ -75,6 +83,7 @@ namespace ERPPlugIn.CrushedMaterialManager
 
                 string sql = @"update shatter_Parts set
                               goodsName='" + goodsName + "',count='" + count + "',price='" +
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                                            price + "',moneySum='" + moneySum + "',badContent='"
                                            + badcontent + "',produceTime=" + produceTime + ",employeeName='" +
                                            employeeName + "',produceArea='" +

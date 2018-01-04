@@ -65,12 +65,19 @@
     <Content Include="CrushedMaterialManager\CrushedMaterial_List.aspx" />
     <Content Include="CrushedMaterialManager\delete.aspx" />
     <Content Include="CrushedMaterialManager\edit.aspx" />
+<<<<<<< HEAD
+    <Content Include="CrushedMaterialManager\getSure.aspx" />
+=======
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Content Include="CrushedMaterialManager\index.aspx" />
     <Content Include="CrushedMaterialManager\insert.aspx" />
     <Content Include="CrushedMaterialManager\print.aspx" />
     <Content Include="CrushedMaterialManager\query.aspx" />
+<<<<<<< HEAD
+=======
     <Content Include="CrushedMaterialManager\sql\create.sql" />
     <Content Include="CrushedMaterialManager\UserManage.aspx" />
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Content Include="css\css.css" />
     <Content Include="css\css_p.css" />
     <Content Include="css\ie6.css" />
@@ -585,6 +592,16 @@
     <Compile Include="CrushedMaterialManager\edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="CrushedMaterialManager\getSure.aspx.cs">
+      <DependentUpon>getSure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\getSure.aspx.designer.cs">
+      <DependentUpon>getSure.aspx</DependentUpon>
+    </Compile>
+=======
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Compile Include="CrushedMaterialManager\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -616,6 +633,8 @@
     <Compile Include="CrushedMaterialManager\ServerData.ashx.cs">
       <DependentUpon>ServerData.ashx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="CrushedMaterialManager\UserManage.aspx.cs">
       <DependentUpon>UserManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -623,6 +642,7 @@
     <Compile Include="CrushedMaterialManager\UserManage.aspx.designer.cs">
       <DependentUpon>UserManage.aspx</DependentUpon>
     </Compile>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Compile Include="Equip\Datatable.cs" />
     <Compile Include="Equip\equip_detail.aspx.cs">
       <DependentUpon>equip_detail.aspx</DependentUpon>

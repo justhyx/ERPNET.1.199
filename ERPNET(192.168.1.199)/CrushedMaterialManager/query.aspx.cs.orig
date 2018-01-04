@@ -18,7 +18,11 @@ namespace ERPPlugIn.CrushedMaterialManager
                                 CONVERT(nvarchar(10),  managerConfirm,126) as managerConfirm   ,spec,ys,cz        
                                 from shatter_Parts
 left join goods on goods.goods_name = shatter_Parts.goodsName
+<<<<<<< HEAD
+                                where topManagerConfirm is not null or managerConfirm is not null order by id desc";
+=======
                                 where tableSign is not null order by id desc";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
 
         string sqlquery = @"select   ID,goodsName,count ,price , moneySum ,
                                 badContent ,ISNULL( CONVERT(nvarchar(10),  produceTime,126),'') as produceTime,employeeName ,
@@ -27,18 +31,30 @@ left join goods on goods.goods_name = shatter_Parts.goodsName
                                 CONVERT(nvarchar(10),  managerConfirm,126) as managerConfirm    ,spec,ys,cz      
                                 from shatter_Parts
 left join goods on goods.goods_name = shatter_Parts.goodsName
+<<<<<<< HEAD
+                                where (topManagerConfirm is not null or managerConfirm is not null)";
+        const string projectBad = "工程内不良品";
+        const string returnBad = "客户退货不良品";
+=======
                                 where (tableSign is not null)";
         const string projectBad = "工程内不良品";
         const string returnBad = "品检不良品";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if (!IsPostBack)
             {
+<<<<<<< HEAD
+                string[] produceArea = new string[] { returnBad, projectBad };
+                DropDownListArea.DataSource = produceArea;
+                DropDownListArea.DataBind();
+=======
                 string[] produceArea = new string[] { projectBad, returnBad };
                 DropDownListArea.DataSource = produceArea;                
                 DropDownListArea.DataBind();
                
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
 
                 Debug.WriteLine(sql);
                 DataTable dt = new SelectCommandBuilder().ExecuteDataTable(sql);
@@ -47,7 +63,12 @@ left join goods on goods.goods_name = shatter_Parts.goodsName
 
                 string sqltableSign = @"select  distinct top 10 tableSign  from shatter_Parts
                                 where tableSign is not null 
+<<<<<<< HEAD
+                                and(produceArea='客户退货区' or produceArea ='全检不良品'
+                                            or produceArea='选别不良品') order by tableSign desc ";
+=======
                                 and(inputArea = 1) order by tableSign desc ";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                 DataTable dtSign = new SelectCommandBuilder().ExecuteDataTable(sqltableSign);
                 DataColumn sign = new DataColumn();
                 sign.ColumnName = "Sign";
@@ -130,7 +151,10 @@ left join goods on goods.goods_name = shatter_Parts.goodsName
             string Area = DropDownListArea.SelectedValue;
             Response.Redirect("print.aspx?tableSign='" + tableSign + "'&Area=" + Area + "");
         }
+<<<<<<< HEAD
+=======
         //重置查询条件
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         protected void ButtonReset_Click(object sender, EventArgs e)
         {
             TextBoxGoodsName.Text = "";
@@ -150,16 +174,26 @@ left join goods on goods.goods_name = shatter_Parts.goodsName
             GridView1.DataBind();
 
         }
+<<<<<<< HEAD
+        protected void ButtonprintQuery_Click(object sender, EventArgs e)
+        {
+=======
         //打印查询
         protected void ButtonprintQuery_Click(object sender, EventArgs e)
         {
             string inputArea1 = "inputArea = 2";
             string inputArea2 = " inputArea = 1";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
             string produceField = DropDownListArea.SelectedValue;
             string tableSign = DropDownListIndex.SelectedValue;
             if (produceField.Equals(returnBad))
             {
+<<<<<<< HEAD
+                sqlquery += @" and(produceArea='客户退货区' or produceArea ='全检不良品'
+                                            or produceArea='选别不良品')";
+=======
                 sqlquery += @" and(" + inputArea1 + ")";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
 
                 sqlquery += " and tableSign = '" + tableSign + "'";
 
@@ -171,7 +205,12 @@ left join goods on goods.goods_name = shatter_Parts.goodsName
             }
             else
             {
+<<<<<<< HEAD
+                sqlquery += @"and (produceArea='G1' or produceArea ='G2'
+                                or produceArea='G3' or produceArea='丝印区')";
+=======
                 sqlquery += @"and (" + inputArea2 + ")";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                 sqlquery += " and tableSign = '" + tableSign + "'";
 
                 Debug.WriteLine(sqlquery);
@@ -183,14 +222,22 @@ left join goods on goods.goods_name = shatter_Parts.goodsName
         }
         protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
         {
+<<<<<<< HEAD
+=======
             string inputArea1 = "inputArea = 2";
             string inputArea2 = " inputArea = 1";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
             string Area = DropDownListArea.SelectedValue;
             if (Area.Equals(returnBad))
             {
                 string sqltableSign = @"select  distinct top 10 tableSign  from shatter_Parts
                                 where tableSign is not null 
+<<<<<<< HEAD
+                                and(produceArea='客户退货区' or produceArea ='全检不良品'
+                                            or produceArea='选别不良品') order by tableSign desc ";
+=======
                                 and(" + inputArea1 + ") order by tableSign desc ";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                 DataTable dtSign = new SelectCommandBuilder().ExecuteDataTable(sqltableSign);
                 DataColumn sign = new DataColumn();
                 sign.ColumnName = "Sign";
@@ -210,7 +257,12 @@ left join goods on goods.goods_name = shatter_Parts.goodsName
             {
                 string sqltableSign = @"select  distinct top 10 tableSign  from shatter_Parts
                                 where tableSign is not null 
+<<<<<<< HEAD
+                                and (produceArea='G1' or produceArea ='G2'
+                                or produceArea='G3' or produceArea='丝印区') order by tableSign desc ";
+=======
                                 and (" + inputArea2 + ") order by tableSign desc ";
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                 DataTable dtSign = new SelectCommandBuilder().ExecuteDataTable(sqltableSign);
                 DataColumn sign = new DataColumn();
                 sign.ColumnName = "Sign";

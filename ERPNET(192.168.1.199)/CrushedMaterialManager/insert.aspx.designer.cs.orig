@@ -10,16 +10,7 @@
 namespace ERPPlugIn.CrushedMaterialManager {
     
     
-    public partial class edit {
-        
-        /// <summary>
-        /// Head1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+    public partial class test {
         
         /// <summary>
         /// form1 控件。
@@ -49,39 +40,80 @@ namespace ERPPlugIn.CrushedMaterialManager {
         protected global::System.Web.UI.UpdatePanel UpdatePanel1;
         
         /// <summary>
-        /// TextgoodsName 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextgoodsName;
-        
-        /// <summary>
+<<<<<<< HEAD
         /// RequiredFieldValidator1 控件。
+=======
+        /// RadioButtonList1 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
+<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+=======
+        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
         
         /// <summary>
-        /// Textcount 控件。
+        /// RequiredFieldValidator4 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textcount;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         
         /// <summary>
+        /// TextBoxgoodsName 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxgoodsName;
+        
+        /// <summary>
+<<<<<<< HEAD
         /// RequiredFieldValidator2 控件。
+=======
+        /// RequiredFieldValidator1 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+=======
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
+        
+        /// <summary>
+        /// TextBoxcount 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxcount;
+        
+        /// <summary>
+<<<<<<< HEAD
+        /// RequiredFieldValidator3 控件。
+=======
+        /// RequiredFieldValidator2 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+=======
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
@@ -92,17 +124,20 @@ namespace ERPPlugIn.CrushedMaterialManager {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         
         /// <summary>
-        /// Textbadcontent 控件。
+        /// TextBoxbadcontent 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textbadcontent;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxbadcontent;
         
         /// <summary>
+<<<<<<< HEAD
+=======
         /// RequiredFieldValidator3 控件。
         /// </summary>
         /// <remarks>
@@ -112,22 +147,23 @@ namespace ERPPlugIn.CrushedMaterialManager {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
-        /// TextproduceTime 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
+        /// TextBoxproduceTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextproduceTime;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxproduceTime;
         
         /// <summary>
-        /// TextemployeeName 控件。
+        /// TextBoxemployeeName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextemployeeName;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxemployeeName;
         
         /// <summary>
         /// DropDownListproduceArea 控件。
@@ -139,21 +175,42 @@ namespace ERPPlugIn.CrushedMaterialManager {
         protected global::System.Web.UI.HtmlControls.HtmlSelect DropDownListproduceArea;
         
         /// <summary>
-        /// ButtonOK 控件。
+        /// Button1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonOK;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// ButtonBack 控件。
+        /// Button2 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonBack;
+        protected global::System.Web.UI.WebControls.Button Button2;
+<<<<<<< HEAD
+=======
+        
+        /// <summary>
+        /// Button3 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button3;
+        
+        /// <summary>
+        /// Label1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     }
 }

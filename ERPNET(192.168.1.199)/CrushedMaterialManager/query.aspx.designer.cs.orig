@@ -10,16 +10,7 @@
 namespace ERPPlugIn.CrushedMaterialManager {
     
     
-    public partial class edit {
-        
-        /// <summary>
-        /// Head1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+    public partial class query {
         
         /// <summary>
         /// form1 控件。
@@ -31,121 +22,195 @@ namespace ERPPlugIn.CrushedMaterialManager {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// ScriptManager1 控件。
+        /// TextBoxGoodsName 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager ScriptManager1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxGoodsName;
         
         /// <summary>
-        /// UpdatePanel1 控件。
+        /// TextBoxcountLess 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxcountLess;
         
         /// <summary>
-        /// TextgoodsName 控件。
+        /// TextBoxcountMore 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextgoodsName;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxcountMore;
         
         /// <summary>
-        /// RequiredFieldValidator1 控件。
+        /// TextBoxPriceLess 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPriceLess;
         
         /// <summary>
-        /// Textcount 控件。
+        /// TextBoxPriceMore 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textcount;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxPriceMore;
         
         /// <summary>
-        /// RequiredFieldValidator2 控件。
+        /// TextBoxMoneyLess 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxMoneyLess;
         
         /// <summary>
-        /// RegularExpressionValidator1 控件。
+        /// TextBoxMoneyMore 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxMoneyMore;
         
         /// <summary>
-        /// Textbadcontent 控件。
+        /// beginTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Textbadcontent;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText beginTime;
         
         /// <summary>
-        /// RequiredFieldValidator3 控件。
+        /// endTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText endTime;
         
         /// <summary>
-        /// TextproduceTime 控件。
+        /// inputTimeBegign 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextproduceTime;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inputTimeBegign;
         
         /// <summary>
-        /// TextemployeeName 控件。
+        /// inputTimeEnd 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextemployeeName;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText inputTimeEnd;
         
         /// <summary>
-        /// DropDownListproduceArea 控件。
+<<<<<<< HEAD
+        /// DropDownListArea 控件。
+=======
+        /// ButtonQuery 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlSelect DropDownListproduceArea;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListArea;
         
         /// <summary>
-        /// ButtonOK 控件。
+        /// DropDownListIndex 控件。
+=======
+        protected global::System.Web.UI.WebControls.Button ButtonQuery;
+        
+        /// <summary>
+        /// ButtonReset 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonOK;
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListIndex;
+        
+        /// <summary>
+        /// ButtonQuery 控件。
+=======
+        protected global::System.Web.UI.WebControls.Button ButtonReset;
+        
+        /// <summary>
+        /// DropDownListArea 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Button ButtonQuery;
+        
+        /// <summary>
+        /// ButtonReset 控件。
+=======
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListArea;
+        
+        /// <summary>
+        /// DropDownListIndex 控件。
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+<<<<<<< HEAD
+        protected global::System.Web.UI.WebControls.Button ButtonReset;
+=======
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListIndex;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
+        
+        /// <summary>
+        /// Buttonprint 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Buttonprint;
+        
+        /// <summary>
+        /// ButtonprintQuery 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonprintQuery;
+        
+        /// <summary>
+        /// GridView1 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
         /// ButtonBack 控件。

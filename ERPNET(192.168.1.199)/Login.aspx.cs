@@ -11,16 +11,20 @@ using System.Data;
 using System.Collections;
 using System.Web.SessionState;
 using System.Configuration;
+using System.Diagnostics;
 
 namespace ERPPlugIn
 {
     public partial class Login : System.Web.UI.Page
     {
-        string con = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        string con = "Data Source=192.168.1.7;Initial Catalog=hudsonwwwroot;User ID=sa";
         protected void Page_Load(object sender, EventArgs e)
         {
+             
+
             if (!Page.IsPostBack)
             {
+                HiddenField1.Value = Request.QueryString["urli"];
                 //if (Request.UrlReferrer != null)
                 //    ViewState["UrlReferrer"] = Request.UrlReferrer.ToString();
                 txtUserName.Focus();
@@ -51,11 +55,10 @@ namespace ERPPlugIn
                     txtPassWords.Focus();
                     return;
                 }
-                SelectCommandBuilder s = new SelectCommandBuilder(con, "operator");
-                s.SelectColumn("count(*)");
-                s.ConditionsColumn("operator_name", txtUserName.Text.Trim());
-                s.getSelectCommand();
-                int count = Convert.ToInt32(s.ExecuteScalar());
+                SelectCommandBuilder s = new SelectCommandBuilder(con, "HUDSON_User");
+                string sqluser = "select count(UserID) from HUDSON_User where UserID = '" + txtUserName.Text.Trim() + "'";
+                Debug.WriteLine(sqluser);
+                int count = Convert.ToInt32(s.ExecuteScalar(sqluser));
                 if (count == 0)
                 {
                     lblResult.Text = "输入的账号不存在";
@@ -66,12 +69,9 @@ namespace ERPPlugIn
                     txtPassWords.Attributes.Add("onfocus", "this.select();");
                     return;
                 }
-                SelectCommandBuilder ss = new SelectCommandBuilder(con, "operator");
-                ss.SelectColumn("count(*)");
-                ss.ConditionsColumn("operator_name", txtUserName.Text.Trim());
-                ss.ConditionsColumn("password", txtPassWords.Text.Trim());
-                ss.getSelectCommand();
-                int countc = Convert.ToInt32(ss.ExecuteScalar());
+                string sqlpwd = @"select count(UserID) from HUDSON_User where UserPassWord = '" + txtPassWords.Text
+                                + "' and UserID = '" + txtUserName.Text + "'";
+                int countc = Convert.ToInt32(s.ExecuteScalar(sqlpwd));
                 if (countc == 0)
                 {
                     lblResult.Text = "密码错误,请重试...";
@@ -80,6 +80,8 @@ namespace ERPPlugIn
                     txtPassWords.Focus();
                     return;
                 }
+                
+               
                 //Hashtable h = (Hashtable)Application["online"];
                 //string oldsessionid = null;
                 //if (h != null)
@@ -130,13 +132,19 @@ namespace ERPPlugIn
                 //Application["online"] = h;//将当前登录用户信息存入application中
                 ////Response.Redirect("~/LoginSuccess.aspx");
                 HttpCookie cook = new HttpCookie("cookie");
-                cook.Values.Add("name", txtUserName.Text.Trim());
+                cook.Values.Add("id", txtUserName.Text.Trim());
                 cook.Values.Add("pwd", txtPassWords.Text.Trim());
                 cook.Values.Add("langue", DropDownList1.SelectedItem.Value.Trim().ToLower());
-                cook.Values.Add("id", new SelectCommandBuilder().ExecuteDataTable("select operator_id from operator where operator_name = '" + txtUserName.Text.Trim() + "'").Rows[0][0].ToString());
+                cook.Values.Add("name", Convert.ToString(s.ExecuteScalar("select UserName from HUDSON_User where userID='" + txtUserName.Text.Trim() + "'")));
                 HttpContext.Current.Response.Cookies.Add(cook);
                 Session["UserName"] = txtUserName.Text;
                 //if (ViewState["UrlReferrer"] == null)
+                if (HiddenField1.Value == "")
+                { }
+                else
+                {
+                    Response.Redirect(HiddenField1.Value);
+                }
                 Response.Redirect("index.aspx");// 默认
                 //else
                 //    Response.Redirect(ViewState["UrlReferrer"].ToString());
@@ -145,6 +153,9 @@ namespace ERPPlugIn
             {
                 lblResult.Text = ex.Message;
                 lblResult.ForeColor = Color.Red;
+                throw;
+                
+                
             }
 
         }

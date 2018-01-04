@@ -7,13 +7,44 @@
     <title></title>
     <script src="../Scripts/jquery-1.4.1.js" type="text/javascript" language="javascript">   </script>
     <script type="text/javascript" language="javascript">
+<<<<<<< HEAD
+
+
+
+        $(document).ready(function () {
+            $(".delete").click(function () {
+                var msg = "\n\n确认删除！";
+                if (confirm(msg) == true) {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        });
+=======
  
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     </script>
     <style type="text/css">
         .hidden
         {
             display: none;
         }
+<<<<<<< HEAD
+    </style>
+</head>
+<body>
+    <asp:HyperLink ID="HyperLinkSuccess" runat="server" NavigateUrl="query.aspx">查看已经审核完成的部品</asp:HyperLink>
+    <form id="form1" runat="server">
+    <asp:HyperLink ID="HyperLinkBack" runat="server" NavigateUrl="insert.aspx">返回插入页面</asp:HyperLink>
+    <div style="width: 120%;">
+        <asp:DropDownList ID="DropDownListArea" runat="server" OnSelectedIndexChanged="DropDownListArea_SelectedIndexChanged"
+            AutoPostBack="True">
+        </asp:DropDownList>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound"
+            Style="margin-bottom: 27px">
+            <Columns>
+=======
         body
         {
            font-size:smaller;    
@@ -48,6 +79,7 @@
                     </ItemTemplate>
                     <ItemStyle Width="90px" />
                 </asp:TemplateField>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                 <asp:TemplateField HeaderText="采购确认">
                     <ItemTemplate>
                         <asp:Label ID="lblBudget" runat="server" Visible="false"></asp:Label>
@@ -60,7 +92,11 @@
                     </ItemTemplate>
                     <ItemStyle Width="90px" />
                 </asp:TemplateField>
+<<<<<<< HEAD
+                <asp:TemplateField HeaderText="主管确认">
+=======
                 <asp:TemplateField HeaderText="品质确认">
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                     <ItemTemplate>
                         <asp:Label ID="lblLeader" runat="server" Visible="false"></asp:Label>
                     </ItemTemplate>
@@ -74,6 +110,25 @@
                 <asp:BoundField HeaderText="部番" DataField="goodsName">
                     <ItemStyle Width="90px" />
                 </asp:BoundField>
+<<<<<<< HEAD
+                <asp:BoundField HeaderText="材料编号" DataField="spec">
+                    <ItemStyle Width="90px" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="数量" DataField="count">
+                    <ItemStyle Width="90px" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="单价" DataField="price">
+                    <ItemStyle Width="90px" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="金额" DataField="moneySum">
+                    <ItemStyle Width="90px" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="不良内容" DataField="badContent">
+                    <ItemStyle Width="300px" />
+                </asp:BoundField>
+                <asp:BoundField HeaderText="不良发生区" DataField="produceArea">
+                    <ItemStyle Width="90px" />
+=======
                 <asp:BoundField HeaderText="材料编号" DataField="cz">
                     <ItemStyle Width="70px" />
                 </asp:BoundField>
@@ -94,6 +149,7 @@
                 </asp:BoundField>
                 <asp:BoundField HeaderText="不良发生区" DataField="produceArea">
                     <ItemStyle Width="70px" />
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
                 </asp:BoundField>
                 <asp:BoundField HeaderText="生产日期" DataField="produceTime">
                     <ItemStyle Width="90px" />
@@ -115,8 +171,19 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
+<<<<<<< HEAD
+        </asp:GridView>
+    </div>
+    <asp:Label ID="LabelMoney" runat="server" Text="Label"></asp:Label>
+    <asp:Button ID="ButtonCEO" runat="server" Text="总经理承认" Visible="false" OnClick="ButtonCEO_Click" />
+    <asp:Button ID="ButtonManager" runat="server" Text="经理承认" Visible="false" OnClick="Buttonmanager_Click" />
+    <asp:Button ID="ButtonPurchase" runat="server" Text="采购确认" OnClick="ButtonPurchase_Click" />
+    <asp:Button ID="ButtonPMC" runat="server" Text="生管确认" OnClick="ButtonPMC_Click" />
+    <asp:Button ID="Buttondirector" runat="server" Text="主管确认" OnClick="Buttondirector_Click" />
+=======
         </asp:GridView>   
     </div>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     </form>
 </body>
 </html>

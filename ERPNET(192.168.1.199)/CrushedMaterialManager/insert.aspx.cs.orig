@@ -8,8 +8,11 @@ using HUDSON.ERP.DBCommandDAL.SQLServerClient;
 using System.Data;
 using System.Diagnostics;
 using System.Data.SqlClient;
+<<<<<<< HEAD
+=======
 using System.Net.Mail;
 using System.Drawing;
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
 namespace ERPPlugIn.CrushedMaterialManager
 {
     public partial class test : System.Web.UI.Page
@@ -34,6 +37,41 @@ namespace ERPPlugIn.CrushedMaterialManager
 
             string employeeName = TextBoxemployeeName.Text;
             string produceArea = DropDownListproduceArea.Value;
+<<<<<<< HEAD
+
+
+          
+
+                //根据输入的部番，查询出其他需要的数据
+                string sqlgetPrice = @" select new_price from goods where goods_name='" + goodsName + "'";
+                //string sqlspec = @" select spec from goods where goods_name='" + goodsName + "'";
+                //string sqlcz = @" select cz from goods where goods_name='" + goodsName + "'";
+                //string sqlys = @" select ys from goods where goods_name='" + goodsName + "'";
+                Debug.WriteLine(sqlgetPrice);
+                double price = 0;
+                
+                SqlDataReader dr = new SelectCommandBuilder().ExecuteReader(sqlgetPrice);
+                while (dr.Read())
+                {
+                    price = double.Parse(dr[0].ToString());
+                }
+                dr.Close();
+                double moneySum = price * double.Parse(count);
+          
+
+                //插入数据           
+
+                string sqlinsert = @"insert into 
+                            shatter_Parts(goodsName,count,price,moneySum,badContent,produceTime,employeeName,produceArea,inputTime)
+                            values('" + goodsName + "'," + count + "," + price + "," + moneySum + ",'" + badcontent
+                                               + "'," + produceTime + ",'" + employeeName + "','" + produceArea
+                                              + "',getDate())";
+                Debug.WriteLine(sqlinsert);
+                new InsertCommandBuilder().ExecuteNonQuery(sqlinsert);
+                //把数据库自动生成的时间改为""
+                Response.Redirect("index.aspx");
+            }
+=======
             string inputArea = RadioButtonList1.SelectedValue;
 
 
@@ -84,12 +122,15 @@ namespace ERPPlugIn.CrushedMaterialManager
             new InsertCommandBuilder().ExecuteNonQuery(sqlinsert);           
             Response.Redirect("index.aspx");
         }
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
         
 
         protected void Button2_Click(object sender, EventArgs e)
         {
             Response.Redirect("index.aspx");
         }
+<<<<<<< HEAD
+=======
 
         protected void Button3_Click(object sender, EventArgs e)
         {
@@ -155,5 +196,6 @@ namespace ERPPlugIn.CrushedMaterialManager
                 Label1.ForeColor = Color.Red;
             }
         }
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     }
 }

@@ -22,22 +22,22 @@ namespace ERPPlugIn.CrushedMaterialManager {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LabelRecord 控件。
+        /// Label1 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelRecord;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// LabelAdmin 控件。
+        /// LabelTime 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelAdmin;
+        protected global::System.Web.UI.WebControls.Label LabelTime;
         
         /// <summary>
         /// GridView1 控件。
@@ -56,6 +56,15 @@ namespace ERPPlugIn.CrushedMaterialManager {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelMoney;
+        
+        /// <summary>
+        /// LabelAdmin 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelAdmin;
         
         /// <summary>
         /// ButtonBack 控件。

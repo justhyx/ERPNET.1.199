@@ -5,3 +5,35 @@ ERPNET(192.168.1.199)/obj/Release/ERPPlugIn.pdb
 ERPNET(192.168.1.199)/obj/Release/TempPE/App_GlobalResources.Resource.designer.cs.dll
 ERPNET(192.168.1.199)/obj/Release/TempPE/App_GlobalResources.Resource.en-us.designer.cs.dll
 ERPNET(192.168.1.199)/obj/Release/TempPE/App_GlobalResources.Resource.th-th.designer.cs.dll
+
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files build by Visual Studio
+*.obj
+*.[Dd]ll
+*.tmp
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+ERPNET(192.168.1.199).suo
