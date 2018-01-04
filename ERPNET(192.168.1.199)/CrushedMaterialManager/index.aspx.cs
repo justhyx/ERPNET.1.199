@@ -407,18 +407,21 @@ namespace ERPPlugIn.CrushedMaterialManager
                 }
 
                 int index = 0;
-                var itemList = new StringBuilder("需要粉碎的部品如下，请各位尽快完成审核。");
+                var itemList = new StringBuilder("<p>需要粉碎的部品如下，请各位尽快完成审核。<p>");
+                itemList.AppendLine("<table>");
                 using (var dr = SqlHelper.ExecuteReader(SqlHelper.conStr, CommandType.Text, sql_unfinish))
                 {
                     while (dr.Read())
                     {
-                        if (string.IsNullOrWhiteSpace(titlePart)) { titlePart = dr.GetString(1); }
-                        itemList.AppendLine(string.Format("[{0}]{1:G}({2:C3})", dr["goodsName"], dr["count"], dr["moneySum"]));
+                        itemList.AppendLine("<tr>");
+                        if (string.IsNullOrWhiteSpace(titlePart)) { titlePart = dr.GetString(0); }
+                        itemList.AppendLine(string.Format("<td>[{0}]</td><td>{1:G} PCS</td><td>{2:C3}</td>", dr["goodsName"], dr["Shattercount"], dr["moneySum"]));
                         index++;
+                        itemList.AppendLine("</tr>");
                     }
                     dr.Close();
                 }
-
+                itemList.AppendLine("</table>");
                 if (index == 0) { throw new Exception("无部品需要审核!"); }
 
                 if (toList.Count == 0) { throw new Exception("无收件人"); }
@@ -433,7 +436,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                 }
 
                 //设置邮件的标题  
-                mail.Subject = string.Format("[粉碎部品审核通知]{0}[{1} 共{2}项]", DateTime.Now.ToLongDateString(), titlePart, index);
+                mail.Subject = string.Format("[粉碎部品审核通知]部品{1}等 共{2}项", DateTime.Now.ToLongDateString(), titlePart, index);
                 //设置邮件的内容  
                 mail.Body = itemList.ToString();
                 //设置邮件的格式  

@@ -5,7 +5,7 @@
 CREATE TABLE [dbo].[shatter_Parts](
 	[ID] [int] IDENTITY(1,1) NOT NULL,
 	[goodsName] [nvarchar](20) NOT NULL,
-	[count] [int] NOT NULL,
+	[sharttercount] [int] NOT NULL,
 	[price] [money] NOT NULL,
 	[moneySum] [money] NOT NULL,
 	[badContent] [nvarchar](50) NOT NULL,
