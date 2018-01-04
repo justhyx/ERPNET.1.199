@@ -33,16 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DBCommandDAL">
-      <HintPath>importdll\DBCommandDAL.dll</HintPath>
-    </Reference>
-    <Reference Include="Interop.LabelManager2">
-      <HintPath>importdll\Interop.LabelManager2.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+    <Reference Include="DBCommandDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\DBCommandDAL.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NPOI">
-      <HintPath>importdll\NPOI.dll</HintPath>
+    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -67,12 +65,19 @@
     <Content Include="CrushedMaterialManager\CrushedMaterial_List.aspx" />
     <Content Include="CrushedMaterialManager\delete.aspx" />
     <Content Include="CrushedMaterialManager\edit.aspx" />
+<<<<<<< HEAD
+    <Content Include="CrushedMaterialManager\getSure.aspx" />
+=======
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Content Include="CrushedMaterialManager\index.aspx" />
     <Content Include="CrushedMaterialManager\insert.aspx" />
     <Content Include="CrushedMaterialManager\print.aspx" />
     <Content Include="CrushedMaterialManager\query.aspx" />
+<<<<<<< HEAD
+=======
     <Content Include="CrushedMaterialManager\sql\create.sql" />
     <Content Include="CrushedMaterialManager\UserManage.aspx" />
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Content Include="css\css.css" />
     <Content Include="css\css_p.css" />
     <Content Include="css\ie6.css" />
@@ -400,9 +405,6 @@
     <Content Include="Images\top_table_leftbg.gif" />
     <Content Include="Images\Upload.gif" />
     <Content Include="Images\_notes\dwsync.xml" />
-    <EmbeddedResource Include="importdll\DBCommandDAL.dll" />
-    <EmbeddedResource Include="importdll\Interop.LabelManager2.dll" />
-    <EmbeddedResource Include="importdll\NPOI.dll" />
     <Content Include="Index.aspx" />
     <Content Include="InventoryManager\Inventory_Begin.aspx" />
     <Content Include="InventoryManager\Inventory_Confirm.aspx" />
@@ -556,7 +558,6 @@
     </Compile>
     <Compile Include="Class\ClassDES.cs" />
     <Compile Include="Class\CommadMethod.cs" />
-    <Compile Include="Class\ConnectionFactory.cs" />
     <Compile Include="Class\GetAprove.cs" />
     <Compile Include="Class\LablePrint.cs" />
     <Compile Include="Class\PageBase.cs">
@@ -591,6 +592,16 @@
     <Compile Include="CrushedMaterialManager\edit.aspx.designer.cs">
       <DependentUpon>edit.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="CrushedMaterialManager\getSure.aspx.cs">
+      <DependentUpon>getSure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CrushedMaterialManager\getSure.aspx.designer.cs">
+      <DependentUpon>getSure.aspx</DependentUpon>
+    </Compile>
+=======
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Compile Include="CrushedMaterialManager\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -622,6 +633,8 @@
     <Compile Include="CrushedMaterialManager\ServerData.ashx.cs">
       <DependentUpon>ServerData.ashx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
     <Compile Include="CrushedMaterialManager\UserManage.aspx.cs">
       <DependentUpon>UserManage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -629,6 +642,7 @@
     <Compile Include="CrushedMaterialManager\UserManage.aspx.designer.cs">
       <DependentUpon>UserManage.aspx</DependentUpon>
     </Compile>
+>>>>>>> 0b5955bddaff6309c1bbc1a4eebf1144c18f88ee
     <Compile Include="Equip\Datatable.cs" />
     <Compile Include="Equip\equip_detail.aspx.cs">
       <DependentUpon>equip_detail.aspx</DependentUpon>

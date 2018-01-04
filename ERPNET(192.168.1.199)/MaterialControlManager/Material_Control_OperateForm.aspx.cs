@@ -44,7 +44,7 @@ namespace ERPPlugIn.MaterialControlManager
         {
             set { ViewState["dfdh"] = value; }
             get { return ViewState["dfdh"].ToString(); }
-        }  
+        }
         private string fromArea
         {
             set { ViewState["fromArea"] = value; }
@@ -70,7 +70,7 @@ namespace ERPPlugIn.MaterialControlManager
             set { ViewState["store_id"] = value; }
             get { return ViewState["store_id"].ToString(); }
         }
-        private static string UserConn = ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -128,10 +128,10 @@ namespace ERPPlugIn.MaterialControlManager
                             return;
                         }
                         area = txtInput.Text;
-                        if (area.Length>11)
+                        if (area.Length > 11)
                         {
                             area = area.Substring(area.Length - 6, 6);
-          
+
                         }
                         else
                         {
@@ -221,51 +221,51 @@ namespace ERPPlugIn.MaterialControlManager
                                     step = 0;
                                     return;
                                 }
-                                    string[] zList = getBarCode(txtInput.Text);
-                                    if (zList.Length<7)
-                                    {                                       
-                                        sList.Insert(0, AppendDateTime("NG,入库票格式错误!"));
-                                        sList.Insert(0, AppendDateTime("NG,重新刷入库票"));
-                                        return;
-                                    }
-                                    goodsName = zList[2];
-                                    Qty=int.Parse(zList[6]);
-                                    int zCount = Convert.ToInt32(new SelectCommandBuilder().ExecuteScalar("select count(*) from material_control where label='"+ zList[0] +"' and process_id= 5 "));
-                                    if (zCount !=0)
-                                    {
-                                        sList.Insert(0,AppendDateTime("入库票重复"));
-                                        sList.Insert(0,AppendDateTime("入库票重复"));
-                                        step=3;
-                                        alertMsg();
-                                        return;
-                                    }
-                                    string sqlz = "SELECT TOP 1 process_id FROM Material_control where label = '" + zList[0] + "' ORDER BY operate_time DESC";
-                                    DataTable dtz = new SelectCommandBuilder().ExecuteDataTable(sqlz);
-                                    if (dtz == null || dtz.Rows.Count == 0)
-                                    {
-                                        sList.Insert(0, AppendDateTime("NG,未入待入库区,请确认扫描后再入库!"));
-                                        sList.Insert(0, AppendDateTime("NG,重新入库票"));
-                                        step = 3;
-                                        alertMsg();
-                                        return;
-                                    }
-                                    int z_areaId = int.Parse(dtz.Rows[0][0].ToString());
-                                    string z_QtySql = "SELECT ISNULL(SUM(CurrQty), 0) AS CurrQty FROM Material_control_process WHERE (label = '" + zList[0] + "' and process_id = 1)";
-                                    int z_Result = Convert.ToInt32(new SelectCommandBuilder().ExecuteScalar(z_QtySql));
-                                    if (z_Result < Qty)
-                                    {
-                                        sList.Insert(0, AppendDateTime("NG,数量超出待入库区数量，无法入库!"));
-                                        sList.Insert(0, AppendDateTime("NG,重新入库票"));
-                                        step = 4;
-                                    }
-                                    else
-                                    {
-                                        z_area(zList[0], goodsName, Qty, ViewState["UserId"].ToString());
-                                        sList.Insert(0, AppendDateTime("部番：" + goodsName + "  数量：" + Qty));
-                                        sList.Insert(0, AppendDateTime("OK,请扫入区域"));
-                                        step = 2;
-                                    }
-                                    alertMsg();                           
+                                string[] zList = getBarCode(txtInput.Text);
+                                if (zList.Length < 7)
+                                {
+                                    sList.Insert(0, AppendDateTime("NG,入库票格式错误!"));
+                                    sList.Insert(0, AppendDateTime("NG,重新刷入库票"));
+                                    return;
+                                }
+                                goodsName = zList[2];
+                                Qty = int.Parse(zList[6]);
+                                int zCount = Convert.ToInt32(new SelectCommandBuilder().ExecuteScalar("select count(*) from material_control where label='" + zList[0] + "' and process_id= 5 "));
+                                if (zCount != 0)
+                                {
+                                    sList.Insert(0, AppendDateTime("入库票重复"));
+                                    sList.Insert(0, AppendDateTime("入库票重复"));
+                                    step = 3;
+                                    alertMsg();
+                                    return;
+                                }
+                                string sqlz = "SELECT TOP 1 process_id FROM Material_control where label = '" + zList[0] + "' ORDER BY operate_time DESC";
+                                DataTable dtz = new SelectCommandBuilder().ExecuteDataTable(sqlz);
+                                if (dtz == null || dtz.Rows.Count == 0)
+                                {
+                                    sList.Insert(0, AppendDateTime("NG,未入待入库区,请确认扫描后再入库!"));
+                                    sList.Insert(0, AppendDateTime("NG,重新入库票"));
+                                    step = 3;
+                                    alertMsg();
+                                    return;
+                                }
+                                int z_areaId = int.Parse(dtz.Rows[0][0].ToString());
+                                string z_QtySql = "SELECT ISNULL(SUM(CurrQty), 0) AS CurrQty FROM Material_control_process WHERE (label = '" + zList[0] + "' and process_id = 1)";
+                                int z_Result = Convert.ToInt32(new SelectCommandBuilder().ExecuteScalar(z_QtySql));
+                                if (z_Result < Qty)
+                                {
+                                    sList.Insert(0, AppendDateTime("NG,数量超出待入库区数量，无法入库!"));
+                                    sList.Insert(0, AppendDateTime("NG,重新入库票"));
+                                    step = 4;
+                                }
+                                else
+                                {
+                                    z_area(zList[0], goodsName, Qty, ViewState["UserId"].ToString());
+                                    sList.Insert(0, AppendDateTime("部番：" + goodsName + "  数量：" + Qty));
+                                    sList.Insert(0, AppendDateTime("OK,请扫入区域"));
+                                    step = 2;
+                                }
+                                alertMsg();
                                 break;
                             case "pickarea":
                                 if (txtInput.Text.ToLower() == "end")
@@ -306,7 +306,7 @@ namespace ERPPlugIn.MaterialControlManager
                                     alertMsg();
                                     return;
                                 }
-                                str_bill_id = CommadMethod.getNextId("Q");                                
+                                str_bill_id = CommadMethod.getNextId("Q");
                                 InsertCommandBuilder insert = new InsertCommandBuilder("pre_str_in_bill");
                                 insert.InsertColumn("str_in_bill_id", str_bill_id);
                                 insert.InsertColumn("str_in_type_id", "C");
@@ -320,7 +320,7 @@ namespace ERPPlugIn.MaterialControlManager
                                 insert.InsertColumn("come_from", "生产加工入库");
                                 insert.InsertColumn("islocal", "Y");
                                 insert.InsertColumn("verifier", "0024");
-                                insert.InsertColumn("bill_num","0");
+                                insert.InsertColumn("bill_num", "0");
                                 insert.InsertColumn("paydate", "1900/1/1");
                                 //insert.InsertColumn("is_state", "N");
                                 paList.Add(insert.getInsertCommand());
@@ -402,7 +402,7 @@ namespace ERPPlugIn.MaterialControlManager
                                     print(prList[0], goodsName, Qty, ViewState["UserId"].ToString());
                                     sList.Insert(0, AppendDateTime("部番：" + goodsName + "  数量：" + Qty));
                                     sList.Insert(0, AppendDateTime("OK,请扫描区域???"));
-                                    List<string> printList =new List<string>();
+                                    List<string> printList = new List<string>();
                                     str_bill_id = CommadMethod.getNextId("Q");
                                     InsertCommandBuilder pInser = new InsertCommandBuilder("pre_str_in_bill");
                                     pInser.InsertColumn("str_in_bill_id", str_bill_id);
@@ -484,7 +484,7 @@ namespace ERPPlugIn.MaterialControlManager
                             return;
                         }
                         string lbel1 = aList[0].Substring(0, 2).ToString();
-                        if (lbel1=="XB")
+                        if (lbel1 == "XB")
                         {
                             List<string> olist = new List<string>();
                             string str_out_bill_id = CommadMethod.getNextId("Q");
@@ -504,84 +504,84 @@ namespace ERPPlugIn.MaterialControlManager
                             insertout.InsertColumn("operator_date", "getdate()");
                             insertout.InsertColumn("islocal", "Y");
                             insertout.InsertColumn("gsptypeid", "2");
-                            olist.Add(insertout.getInsertCommand());                            
-                            string Dsql=@"SELECT stock_remain.goods_id, stock_remain.qty, batch.batch_id,batch.hwh, stock_remain.store_id FROM 
+                            olist.Add(insertout.getInsertCommand());
+                            string Dsql = @"SELECT stock_remain.goods_id, stock_remain.qty, batch.batch_id,batch.hwh, stock_remain.store_id FROM 
                             stock_remain INNER JOIN batch ON stock_remain.batch_id = batch.batch_id 
                             WHERE (stock_remain.goods_id = '" + goods_id + "') AND (batch.hwh = 'NG01') and stock_remain.store_id='12' order by right(rtrim(batch.pch),6)";
-                            SelectCommandBuilder s  =new SelectCommandBuilder();
+                            SelectCommandBuilder s = new SelectCommandBuilder();
                             int count = Convert.ToInt32(s.ExecuteScalar(Dsql));
-                            if (count==0)
+                            if (count == 0)
                             {
-                                sList.Insert(0,"选别区数量不足");
-                                sList.Insert(0,"NG,请扫描区域");
+                                sList.Insert(0, "选别区数量不足");
+                                sList.Insert(0, "NG,请扫描区域");
                                 step = 2;
                                 alertMsg();
                                 return;
                             }
-                            DataTable Dqty=s.ExecuteDataTable(Dsql);
-                            int dbqty=0;
-                            int xQty=Qty;                            
+                            DataTable Dqty = s.ExecuteDataTable(Dsql);
+                            int dbqty = 0;
+                            int xQty = Qty;
                             for (int i = 0; i < Dqty.Rows.Count; i++)
-			                    {
-                                    dbqty = xQty - Convert.ToInt32(Dqty.Rows[i]["qty"]);                                
-                                if (dbqty==0)
-	                                {
-                                        InsertCommandBuilder insd = new InsertCommandBuilder("pre_str_out_bill_detail");
-                                        insd.InsertColumn("str_out_bill_id", str_out_bill_id);
-                                        insd.InsertColumn("goods_id", goods_id);
-                                        insd.InsertColumn("batch_id", Dqty.Rows[i]["batch_id"]);
-                                        insd.InsertColumn("qty", xQty);
-                                        insd.InsertColumn("exam", " ");
-                                        insd.InsertColumn("price", "0");
-                                        insd.InsertColumn("Can_sale", "Y");
-                                        insd.InsertColumn("DSort", "1");
-                                        insd.InsertColumn("CostPrice", "0");
-                                        insd.InsertColumn("hwh", hwh);
-                                        olist.Add(insd.getInsertCommand());
-		                            break;    
-	                                }                                    
-			                    else if (dbqty>0)
-	                                {
-                                        InsertCommandBuilder insd = new InsertCommandBuilder("pre_str_out_bill_detail");
-                                        insd.InsertColumn("str_out_bill_id", str_out_bill_id);
-                                        insd.InsertColumn("goods_id", goods_id);
-                                        insd.InsertColumn("batch_id", Dqty.Rows[i]["batch_id"]);
-                                        insd.InsertColumn("qty", Dqty.Rows[i]["qty"]);
-                                        insd.InsertColumn("exam", " ");
-                                        insd.InsertColumn("price", "0");
-                                        insd.InsertColumn("Can_sale", "Y");
-                                        insd.InsertColumn("DSort", "1");
-                                        insd.InsertColumn("CostPrice", "0");
-                                        insd.InsertColumn("hwh", hwh);
-                                        xQty = dbqty;
-                                   olist.Add(insd.getInsertCommand());
+                            {
+                                dbqty = xQty - Convert.ToInt32(Dqty.Rows[i]["qty"]);
+                                if (dbqty == 0)
+                                {
+                                    InsertCommandBuilder insd = new InsertCommandBuilder("pre_str_out_bill_detail");
+                                    insd.InsertColumn("str_out_bill_id", str_out_bill_id);
+                                    insd.InsertColumn("goods_id", goods_id);
+                                    insd.InsertColumn("batch_id", Dqty.Rows[i]["batch_id"]);
+                                    insd.InsertColumn("qty", xQty);
+                                    insd.InsertColumn("exam", " ");
+                                    insd.InsertColumn("price", "0");
+                                    insd.InsertColumn("Can_sale", "Y");
+                                    insd.InsertColumn("DSort", "1");
+                                    insd.InsertColumn("CostPrice", "0");
+                                    insd.InsertColumn("hwh", hwh);
+                                    olist.Add(insd.getInsertCommand());
+                                    break;
+                                }
+                                else if (dbqty > 0)
+                                {
+                                    InsertCommandBuilder insd = new InsertCommandBuilder("pre_str_out_bill_detail");
+                                    insd.InsertColumn("str_out_bill_id", str_out_bill_id);
+                                    insd.InsertColumn("goods_id", goods_id);
+                                    insd.InsertColumn("batch_id", Dqty.Rows[i]["batch_id"]);
+                                    insd.InsertColumn("qty", Dqty.Rows[i]["qty"]);
+                                    insd.InsertColumn("exam", " ");
+                                    insd.InsertColumn("price", "0");
+                                    insd.InsertColumn("Can_sale", "Y");
+                                    insd.InsertColumn("DSort", "1");
+                                    insd.InsertColumn("CostPrice", "0");
+                                    insd.InsertColumn("hwh", hwh);
+                                    xQty = dbqty;
+                                    olist.Add(insd.getInsertCommand());
                                     continue;
-	                                }
-                                else if (dbqty<0)
-	                                {
-                                        InsertCommandBuilder insd = new InsertCommandBuilder("pre_str_out_bill_detail");
-                                        insd.InsertColumn("str_out_bill_id", str_out_bill_id);
-                                        insd.InsertColumn("goods_id", goods_id);
-                                        insd.InsertColumn("batch_id", Dqty.Rows[i]["batch_id"]);
-                                        insd.InsertColumn("qty", xQty);
-                                        insd.InsertColumn("exam", " ");
-                                        insd.InsertColumn("price", "0");
-                                        insd.InsertColumn("Can_sale", "Y");
-                                        insd.InsertColumn("DSort", "1");
-                                        insd.InsertColumn("CostPrice", "0");
-                                        insd.InsertColumn("hwh", hwh);
-                                        olist.Add(insd.getInsertCommand());
-		                            break;		                                
-	                                }
-			                    }                            
-                           new InsertCommandBuilder().ExcutTransaction(olist);
+                                }
+                                else if (dbqty < 0)
+                                {
+                                    InsertCommandBuilder insd = new InsertCommandBuilder("pre_str_out_bill_detail");
+                                    insd.InsertColumn("str_out_bill_id", str_out_bill_id);
+                                    insd.InsertColumn("goods_id", goods_id);
+                                    insd.InsertColumn("batch_id", Dqty.Rows[i]["batch_id"]);
+                                    insd.InsertColumn("qty", xQty);
+                                    insd.InsertColumn("exam", " ");
+                                    insd.InsertColumn("price", "0");
+                                    insd.InsertColumn("Can_sale", "Y");
+                                    insd.InsertColumn("DSort", "1");
+                                    insd.InsertColumn("CostPrice", "0");
+                                    insd.InsertColumn("hwh", hwh);
+                                    olist.Add(insd.getInsertCommand());
+                                    break;
+                                }
+                            }
+                            new InsertCommandBuilder().ExcutTransaction(olist);
                             Storge(aList[0], goodsName, Qty, 2, ViewState["UserId"].ToString());//1:待入库 2：选别
                             sList.Insert(0, AppendDateTime("部番：" + goodsName + "  数量：" + Qty));
                             sList.Insert(0, AppendDateTime("OK,请扫描区域"));
                             step = 2;
                             alertMsg();
                             return;
-                            }
+                        }
                         str_bill_id = CommadMethod.getNextId("Q");
                         InsertCommandBuilder insert3 = new InsertCommandBuilder("pre_str_in_bill");
                         insert3.InsertColumn("str_in_bill_id", str_bill_id);
@@ -606,15 +606,15 @@ namespace ERPPlugIn.MaterialControlManager
                         ins.InsertColumn("qty", Qty);
                         ins.InsertColumn("exam", " ");
                         ins.InsertColumn("yxq", "1900/1/1");
-                        ins.InsertColumn("Producedate", "1900/1/1");                        
-                        ins.InsertColumn("inqty",Qty);
+                        ins.InsertColumn("Producedate", "1900/1/1");
+                        ins.InsertColumn("inqty", Qty);
                         ins.InsertColumn("notin", "1");
                         ins.InsertColumn("tax_rate", "17");
                         ins.InsertColumn("piece", "0");
                         ins.InsertColumn("price", "0");
                         ins.InsertColumn("hwh", hwh);
                         ins.InsertColumn("pch", aList[0].Substring(2, 6));
-                        Alist.Add(ins.getInsertCommand());                        
+                        Alist.Add(ins.getInsertCommand());
                         string sql2 = "SELECT TOP 1 process_id FROM Material_control where label = '" + aList[0] + "' ORDER BY operate_time DESC";
                         DataTable dt = new SelectCommandBuilder().ExecuteDataTable(sql2);
                         if (dt == null || dt.Rows.Count == 0)
@@ -646,7 +646,7 @@ namespace ERPPlugIn.MaterialControlManager
                         break;
                 }
             }
-    
+
             catch (Exception ex)
             {
                 sList.Insert(0, AppendDateTime(ex.Message));
@@ -704,16 +704,16 @@ namespace ERPPlugIn.MaterialControlManager
             new InsertCommandBuilder().ExecuteNonQuery(sql);
 
         }
-        public void z_area(string label,string goodsName,int Qty,string userId)
+        public void z_area(string label, string goodsName, int Qty, string userId)
         {
             InsertData(label, goodsName, Qty, 5, userId);
             SelectCommandBuilder s = new SelectCommandBuilder();
             int count = Convert.ToInt32(s.ExecuteScalar("select count(*) from Material_control_process where label='" + label + "' and process_id = 5 "));
             string sql = string.Empty;
-            if (count !=0)
+            if (count != 0)
             {
                 UpdateCommandBuilder up = new UpdateCommandBuilder();
-                sql="update Material_control_process set InQty = InQty + " + Qty + " ,CurrQty = CurrQty + " + Qty + " where label = '" + label + "' and process_id = 5";
+                sql = "update Material_control_process set InQty = InQty + " + Qty + " ,CurrQty = CurrQty + " + Qty + " where label = '" + label + "' and process_id = 5";
             }
             else
             {
@@ -830,10 +830,10 @@ namespace ERPPlugIn.MaterialControlManager
             ins.InsertColumn("operator", userId);
             ins.getInsertCommand();
             ins.ExecuteNonQuery();
-        } 
+        }
         public bool getUser(string UserId)
         {
-            SelectCommandBuilder select = new SelectCommandBuilder(UserConn, "HUDSON_User");
+            SelectCommandBuilder select = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "HUDSON_User");
             select.SelectColumn("Count(*)");
             select.ConditionsColumn("UserId", UserId);
             select.getSelectCommand();

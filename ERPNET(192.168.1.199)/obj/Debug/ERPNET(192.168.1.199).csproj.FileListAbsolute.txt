@@ -1,5 +1,0 @@
-F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\obj\Debug\ERPNET(192.168.1.199).csprojResolveAssemblyReference.cache
-F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\bin\ERPPlugIn.dll
-F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\bin\ERPPlugIn.pdb
-F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\obj\Debug\ERPPlugIn.dll
-F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\obj\Debug\ERPPlugIn.pdb
