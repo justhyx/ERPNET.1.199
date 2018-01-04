@@ -46,6 +46,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Mobile" />
     <Reference Include="System.Xml.Linq" />
@@ -68,6 +69,7 @@
     <Content Include="CrushedMaterialManager\insert.aspx" />
     <Content Include="CrushedMaterialManager\print.aspx" />
     <Content Include="CrushedMaterialManager\query.aspx" />
+    <Content Include="CrushedMaterialManager\sql\create.sql" />
     <Content Include="CrushedMaterialManager\UserManage.aspx" />
     <Content Include="css\css.css" />
     <Content Include="css\css_p.css" />
@@ -1165,6 +1167,9 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Resource.th-th.designer.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

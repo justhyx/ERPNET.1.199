@@ -9,6 +9,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Data.SqlClient;
 using System.Net.Mail;
+using System.Drawing;
 namespace ERPPlugIn.CrushedMaterialManager
 {
     public partial class test : System.Web.UI.Page
@@ -141,15 +142,17 @@ namespace ERPPlugIn.CrushedMaterialManager
             ////如果发送失败，SMTP 服务器将发送 失败邮件告诉我  
             mail.DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure;
 
-           
+
             try
             {
                 client.Send(mail);
+                Label1.Text = "发送邮件成功";
+                Label1.ForeColor = Color.Red;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
-                throw;
+                Label1.Text = "发送邮件失败";
+                Label1.ForeColor = Color.Red;
             }
         }
     }

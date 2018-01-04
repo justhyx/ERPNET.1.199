@@ -172,6 +172,7 @@
                         <td style="text-align: center;">
                             <asp:Button ID="Button3" runat="server" Text="发送邮件" CausesValidation="False" 
                                 onclick="Button3_Click" />
+                            <asp:Label ID="Label1" runat="server"></asp:Label>
                         </td>
                     </tr>
                 </table>

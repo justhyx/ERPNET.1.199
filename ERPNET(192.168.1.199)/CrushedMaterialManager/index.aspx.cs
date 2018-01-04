@@ -54,9 +54,9 @@ namespace ERPPlugIn.CrushedMaterialManager
                 {
                     
 
-                    string userID = Cook.Values["id"];
-                    string sqlrole = "select department from shatter_Parts_Password where userID = '" + userID + "'";
-                    string role = (string)cmd.ExecuteScalar(sqlrole);
+                    //string userID = Cook.Values["id"];
+                    //string sqlrole = "select department from shatter_Parts_Password where userID = '" + userID + "'";
+                    //string role = (string)cmd.ExecuteScalar(sqlrole);
                     getData();
                     #region
                     //switch (role)
