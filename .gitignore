@@ -1,5 +1,6 @@
 #ignore thumbnails created by windows
 Thumbs.db
+!importdll\
 #Ignore files build by Visual Studio
 *.obj
 *.[Dd]ll
@@ -28,5 +29,4 @@ Thumbs.db
 */[Rr]elease*/*
 _ReSharper*/*
 [Tt]est[Rr]esult*
-ERPNET(192.168.1.199).suo
-ERPNET(192.168.1.199)/bin/ERPPlugIn.dll
+
