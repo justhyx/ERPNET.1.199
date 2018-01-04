@@ -14,7 +14,7 @@ namespace ERPPlugIn.MaintenanceRecords
 {
     public partial class MaintenanceRecords : System.Web.UI.Page
     {
-        string constr = ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString;
+
         public string Id { get { return ViewState["id"].ToString(); } set { ViewState["id"] = value; } }
         public string imgId { get { return ViewState["imgId"].ToString(); } set { ViewState["imgId"] = value; } }
         protected void Page_Load(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace ERPPlugIn.MaintenanceRecords
         }
         public void getPerson()
         {
-            SelectCommandBuilder s = new SelectCommandBuilder(constr, "HUDSON_User");
+            SelectCommandBuilder s = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "HUDSON_User");
             s.SelectColumn("UserName");
             s.ConditionsColumn("user_l", "19");
             s.getSelectCommand();

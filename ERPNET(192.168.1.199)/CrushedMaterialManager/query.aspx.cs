@@ -11,7 +11,7 @@ namespace ERPPlugIn.CrushedMaterialManager
 {
     public partial class query : System.Web.UI.Page
     {
-        string sql = @"select top 20 ID,goodsName,count ,price , moneySum ,
+        string sql = @"select top 20 ID,goodsName,Shattercount ,price , moneySum ,
                                 badContent ,ISNULL(CONVERT(nvarchar(10),  produceTime,126),'') as produceTime,employeeName  ,
                                ISNULL(CONVERT(nvarchar(10),  inputTime,126),'') as inputTime,  produceArea ,
                                 CONVERT(nvarchar(10),  topManagerConfirm,126) as topManagerConfirm,
@@ -20,7 +20,7 @@ namespace ERPPlugIn.CrushedMaterialManager
 left join goods on goods.goods_name = shatter_Parts.goodsName
                                 where tableSign is not null order by id desc";
 
-        string sqlquery = @"select   ID,goodsName,count ,price , moneySum ,
+        string sqlquery = @"select   ID,goodsName,Shattercount ,price , moneySum ,
                                 badContent ,ISNULL( CONVERT(nvarchar(10),  produceTime,126),'') as produceTime,employeeName ,
                                 ISNULL(CONVERT(nvarchar(10),  inputTime,126),'') as inputTime ,produceArea ,
                                 CONVERT(nvarchar(10),  topManagerConfirm,126) as topManagerConfirm,

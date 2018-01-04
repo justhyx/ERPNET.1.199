@@ -10,12 +10,13 @@ using System.Configuration;
 using NPOI.HSSF.UserModel;
 using NPOI.SS.UserModel;
 using System.IO;
+using ERPPlugIn.Class;
 
 namespace ERPPlugIn.MaintenanceRecords
 {
     public partial class MaintenanceRecords_List : System.Web.UI.Page
     {
-        string constr = ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString;
+
         public DataTable myTable { get { return ViewState["tb"] as DataTable; } set { ViewState["tb"] = value; } }
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -66,7 +67,7 @@ namespace ERPPlugIn.MaintenanceRecords
         }
         public void getPerson()
         {
-            SelectCommandBuilder s = new SelectCommandBuilder(constr, "HUDSON_User");
+            SelectCommandBuilder s = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "HUDSON_User");
             s.SelectColumn("UserName");
             s.ConditionsColumn("user_l", "19");
             s.getSelectCommand();

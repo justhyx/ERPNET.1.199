@@ -1,11 +1,3 @@
-ERPNET(192.168.1.199)/obj/Release/DesignTimeResolveAssemblyReferencesInput.cache
-ERPNET(192.168.1.199)/obj/Release/ERPNET(192.168.1.199).csproj.FileListAbsolute.txt
-ERPNET(192.168.1.199)/obj/Release/ERPPlugIn.dll
-ERPNET(192.168.1.199)/obj/Release/ERPPlugIn.pdb
-ERPNET(192.168.1.199)/obj/Release/TempPE/App_GlobalResources.Resource.designer.cs.dll
-ERPNET(192.168.1.199)/obj/Release/TempPE/App_GlobalResources.Resource.en-us.designer.cs.dll
-ERPNET(192.168.1.199)/obj/Release/TempPE/App_GlobalResources.Resource.th-th.designer.cs.dll
-
 #ignore thumbnails created by windows
 Thumbs.db
 #Ignore files build by Visual Studio
@@ -28,12 +20,13 @@ Thumbs.db
 *.cache
 *.ilk
 *.log
-[Bb]in
-[Dd]ebug*/
+*/[Bb]in/*
+*/[Dd]ebug*/*
 *.lib
 *.sbr
-obj/
-[Rr]elease*/
-_ReSharper*/
+*/obj/
+*/[Rr]elease*/*
+_ReSharper*/*
 [Tt]est[Rr]esult*
 ERPNET(192.168.1.199).suo
+ERPNET(192.168.1.199)/bin/ERPPlugIn.dll

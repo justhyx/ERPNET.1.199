@@ -23,12 +23,12 @@ namespace ERPPlugIn.CrushedMaterialManager
                 {
                     Response.Redirect("index.aspx");
                 }
-                string sql = @"select goodsName,count,badContent,produceTime,employeeName,produceArea
+                string sql = @"select goodsName,Shattercount,badContent,produceTime,employeeName,produceArea
                       from shatter_Parts where id= " + id + " and produceArea is not null";
                 DataTable dt = cmd.ExecuteDataTable(sql);
 
                 TextgoodsName.Text = (string)dt.Rows[0]["goodsName"];
-                Textcount.Text = Convert.ToString(dt.Rows[0]["count"]);
+                Textcount.Text = Convert.ToString(dt.Rows[0]["Shattercount"]);
                 Textbadcontent.Text = (string)dt.Rows[0]["badContent"];
                 TextemployeeName.Text = (string)dt.Rows[0]["employeeName"];
             }
@@ -74,7 +74,7 @@ namespace ERPPlugIn.CrushedMaterialManager
 
 
                 string sql = @"update shatter_Parts set
-                              goodsName='" + goodsName + "',count='" + count + "',price='" +
+                              goodsName='" + goodsName + "',Shattercount='" + count + "',price='" +
                                            price + "',moneySum='" + moneySum + "',badContent='"
                                            + badcontent + "',produceTime=" + produceTime + ",employeeName='" +
                                            employeeName + "',produceArea='" +

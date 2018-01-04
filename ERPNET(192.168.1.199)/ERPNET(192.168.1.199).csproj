@@ -551,6 +551,7 @@
     </Compile>
     <Compile Include="Class\ClassDES.cs" />
     <Compile Include="Class\CommadMethod.cs" />
+    <Compile Include="Class\ConnectionFactory.cs" />
     <Compile Include="Class\GetAprove.cs" />
     <Compile Include="Class\LablePrint.cs" />
     <Compile Include="Class\PageBase.cs">

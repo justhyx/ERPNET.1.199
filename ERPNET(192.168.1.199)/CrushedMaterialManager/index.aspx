@@ -16,33 +16,35 @@
         }
         body
         {
-           font-size:smaller;    
+            font-size: smaller;
         }
     </style>
 </head>
 <body>
-    
     <form id="form1" runat="server">
-   
     <div style="width: 100%;">
-     <asp:HyperLink ID="HyperLinkSuccess" runat="server" NavigateUrl="query.aspx">已完成的履历</asp:HyperLink>
-    <asp:HyperLink ID="HyperLinkBack" runat="server" NavigateUrl="insert.aspx">新增记录</asp:HyperLink>
-    <asp:DropDownList ID="DropDownListArea" runat="server" OnSelectedIndexChanged="DropDownListArea_SelectedIndexChanged"
-            AutoPostBack="True">
-        </asp:DropDownList>
-     <asp:Label ID="LabelMoney" runat="server" Text="Label"></asp:Label>
-        <asp:Button ID="Button1" runat="server" Text="品质审核" onclick="Button1_Click" />
-        <asp:Button ID="Button2" runat="server" Text="生管审核" onclick="Button2_Click"  />
-        <asp:Button ID="Button3" runat="server" Text="采购审核" onclick="Button3_Click" />
-        <asp:Button ID="Button4" runat="server" Text="成型审核" onclick="Button4_Click"  Enabled="false"/>
-        <asp:Button ID="Button5" runat="server" Text="总经理审核" onclick="Button5_Click" Enabled="false"/>
-           <%-- <asp:Button ID="buttonConfirm" runat="server" Visible="false" onclick="buttonConfirm_Click" 
+        <div>
+            <asp:HyperLink ID="HyperLinkSuccess" runat="server" NavigateUrl="query.aspx">已完成的履历</asp:HyperLink>
+            <asp:HyperLink ID="HyperLinkBack" runat="server" NavigateUrl="insert.aspx">新增记录</asp:HyperLink>
+            <asp:DropDownList ID="DropDownListArea" runat="server" OnSelectedIndexChanged="DropDownListArea_SelectedIndexChanged"
+                AutoPostBack="True">
+            </asp:DropDownList>
+            <asp:Label ID="LabelMoney" runat="server" Text="Label"></asp:Label>
+            <asp:Button ID="Button1" runat="server" Text="品质审核" OnClick="Button1_Click" />
+            <asp:Button ID="Button2" runat="server" Text="生管审核" OnClick="Button2_Click" />
+            <asp:Button ID="Button3" runat="server" Text="采购审核" OnClick="Button3_Click" />
+            <asp:Button ID="Button4" runat="server" Text="成型审核" OnClick="Button4_Click" Enabled="false" />
+            <asp:Button ID="Button5" runat="server" Text="总经理审核" OnClick="Button5_Click" Enabled="false" />
+            <%-- <asp:Button ID="buttonConfirm" runat="server" Visible="false" onclick="buttonConfirm_Click" 
             />--%>
-        
+            <asp:Button ID="btnSendMail" runat="server" Text="发送邮件" CausesValidation="False"
+                OnClick="btnSendMail_Click" />
+            <asp:Label ID="LabelMsg" runat="server"></asp:Label>
+        </div>
         <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridView1_RowDataBound"
             Style="margin-bottom: 27px">
             <Columns>
-             <asp:TemplateField HeaderText="成型确认">
+                <asp:TemplateField HeaderText="成型确认">
                     <ItemTemplate>
                         <asp:Label ID="lblModing" runat="server" Visible="false"></asp:Label>
                     </ItemTemplate>
@@ -77,10 +79,10 @@
                 <asp:BoundField HeaderText="材料编号" DataField="cz">
                     <ItemStyle Width="70px" />
                 </asp:BoundField>
-                <asp:BoundField HeaderText="数量" DataField="count">
+                <asp:BoundField HeaderText="数量" DataField="Shattercount">
                     <ItemStyle Width="40px" />
                 </asp:BoundField>
-                 <asp:BoundField HeaderText="材料用量" DataField="cpdz">
+                <asp:BoundField HeaderText="材料用量" DataField="cpdz">
                     <ItemStyle Width="70px" />
                 </asp:BoundField>
                 <asp:BoundField HeaderText="单价" DataField="price">
@@ -89,7 +91,7 @@
                 <asp:BoundField HeaderText="金额" DataField="moneySum">
                     <ItemStyle Width="70px" />
                 </asp:BoundField>
-                <asp:BoundField HeaderText="不良内容" DataField="badContent" >
+                <asp:BoundField HeaderText="不良内容" DataField="badContent">
                     <ItemStyle Width="100px" />
                 </asp:BoundField>
                 <asp:BoundField HeaderText="不良发生区" DataField="produceArea">
@@ -115,7 +117,7 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>
-        </asp:GridView>   
+        </asp:GridView>
     </div>
     </form>
 </body>

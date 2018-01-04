@@ -53,7 +53,7 @@ namespace ERPPlugIn.MaterialControlManager
             set { ViewState["barcode"] = value; }
             get { return ViewState["barcode"].ToString(); }
         }
-        private static string UserConn = ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -91,7 +91,7 @@ namespace ERPPlugIn.MaterialControlManager
         }
         public bool getUser(string UserId)
         {
-            SelectCommandBuilder select = new SelectCommandBuilder(UserConn, "HUDSON_User");
+            SelectCommandBuilder select = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "HUDSON_User");
             select.SelectColumn("Count(*)");
             select.ConditionsColumn("UserId", UserId);
             select.getSelectCommand();

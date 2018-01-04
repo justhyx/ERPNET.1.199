@@ -21,7 +21,7 @@ namespace ERPPlugIn.CrushedMaterialManager
         string mailList = ConfigurationManager.AppSettings["mailList"].ToString();
         string ccList = ConfigurationManager.AppSettings["ccList"].ToString();
         string url = ConfigurationManager.AppSettings["url"].ToString();
-        string constr = ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -33,7 +33,7 @@ namespace ERPPlugIn.CrushedMaterialManager
         public List<CrushedMaterial> getAllCrushedMaterial()
         {
             List<CrushedMaterial> cList = new List<CrushedMaterial>();
-            SelectCommandBuilder s = new SelectCommandBuilder(constr, "trymolde");
+            SelectCommandBuilder s = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
             string sql = "SELECT id, 品番, 材料, 材料编号, 模具担当, addtime, PO处理 FROM trymolde WHERE (PO处理 = '粉碎') AND(isApprove is null) ORDER BY addtime";
             SqlDataReader dr = s.ExecuteReader(sql);
             if (dr.HasRows)
@@ -142,7 +142,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                             list += cmList[i].JigLeader;
                         }
 
-                        UpdateCommandBuilder up = new UpdateCommandBuilder(constr, "trymolde");
+                        UpdateCommandBuilder up = new UpdateCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
                         up.UpdateColumn("isApprove", ddlVerify.SelectedItem.Text);
                         up.UpdateColumn("ApprovedDate", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                         up.UpdateColumn("Reason", txtReason.Text.Trim());
@@ -168,7 +168,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                         bd.Add(body + "审核已通过!" + "   <a href='" + url + "?status=Wait&&area=3'>点击此链接开始进行粉碎...</a>");
                         bd.Add(body + "审核已通过!" + "   <a href='" + url + "?status=Wait&&area=4'>点击此链接开始进行粉碎...</a>");
                     }
-                    InsertCommandBuilder ins = new InsertCommandBuilder(constr, "trymolde");
+                    InsertCommandBuilder ins = new InsertCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
                     int count = ins.ExcutTransaction(sqlList);
                     if (count != 0)
                     {
@@ -210,7 +210,7 @@ namespace ERPPlugIn.CrushedMaterialManager
         {
             string mail = "";
             string[] nameList = userName.Split(';');
-            SelectCommandBuilder s = new SelectCommandBuilder(constr, "trymolde");
+            SelectCommandBuilder s = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
             string sql = "SELECT email FROM HUDSON_User";
             for (int i = 0; i < nameList.Length; i++)
             {

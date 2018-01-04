@@ -37,7 +37,6 @@
             return false;
         }
     </script>
-       
     <script type="text/javascript" language="javascript">
 
 
@@ -82,17 +81,19 @@
         <ContentTemplate>
             <div id="div_first">
                 <table runat="server" style="" border="1" cellspacing="0" align="center">
-                <tr>
-                <td></td>
-                    <td>
-                        <asp:RadioButtonList ID="RadioButtonList1" runat="server">
-                        <asp:ListItem Value="1">现场录入</asp:ListItem>
-                         <asp:ListItem Value="2">品检录入</asp:ListItem>
-                        </asp:RadioButtonList>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" 
-                            ControlToValidate="RadioButtonList1" ErrorMessage="必须选择现场或者品检"></asp:RequiredFieldValidator>
-                    </td>
-                </tr>
+                    <tr>
+                        <td class="" style="width: 120px;">
+                            <span class="lbl">录入区域</span>
+                        </td>
+                        <td>
+                            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+                                <asp:ListItem Value="1">现场录入</asp:ListItem>
+                                <asp:ListItem Value="2">品检录入</asp:ListItem>
+                            </asp:RadioButtonList>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="RadioButtonList1"
+                                ErrorMessage="必须选择现场或者品检"></asp:RequiredFieldValidator>
+                        </td>
+                    </tr>
                     <tr>
                         <td class="" style="width: 120px;">
                             <span class="lbl">部番</span>
@@ -111,9 +112,8 @@
                             <asp:TextBox ID="TextBoxcount" class="inputControl" runat="server"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBoxcount"
                                 ErrorMessage="输入不能为空"></asp:RequiredFieldValidator>
-                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" 
-                                ControlToValidate="TextBoxcount" ErrorMessage="只能输入数字" 
-                                ValidationExpression="^\+?[1-9][0-9]*$"></asp:RegularExpressionValidator>
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBoxcount"
+                                ErrorMessage="只能输入数字" ValidationExpression="^\+?[1-9][0-9]*$"></asp:RegularExpressionValidator>
                         </td>
                     </tr>
                     <tr>
@@ -165,14 +165,6 @@
                             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="提交" />
                             <asp:Button ID="Button2" runat="server" CausesValidation="False" OnClick="Button2_Click"
                                 Text="返回" />
-                        </td>
-                    </tr>
-                    <tr>
-                    <td></td>
-                        <td style="text-align: center;">
-                            <asp:Button ID="Button3" runat="server" Text="发送邮件" CausesValidation="False" 
-                                onclick="Button3_Click" />
-                            <asp:Label ID="Label1" runat="server"></asp:Label>
                         </td>
                     </tr>
                 </table>

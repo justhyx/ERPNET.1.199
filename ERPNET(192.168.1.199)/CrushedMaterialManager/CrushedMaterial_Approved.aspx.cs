@@ -7,12 +7,13 @@ using System.Web.UI.WebControls;
 using HUDSON.ERP.DBCommandDAL.SQLServerClient;
 using System.Data.SqlClient;
 using System.Configuration;
+using ERPPlugIn.Class;
 
 namespace ERPPlugIn.CrushedMaterialManager
 {
     public partial class CrushedMaterial_Approved : System.Web.UI.Page
     {
-        string constr = ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
@@ -44,7 +45,7 @@ namespace ERPPlugIn.CrushedMaterialManager
         public List<CrushedMaterialDetail> getAllCrushedMaterial()
         {
             List<CrushedMaterialDetail> cList = new List<CrushedMaterialDetail>();
-            SelectCommandBuilder s = new SelectCommandBuilder(constr, "trymolde");
+            SelectCommandBuilder s = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
             string sql = "SELECT id, 品番, 材料, 材料编号, 模具担当, addtime, area1style, area2style, area3style, area4style FROM trymolde WHERE (PO处理 = '粉碎') AND (isApprove = 'OK') AND (area1style <> 'Done')OR (area2style <> 'Done')OR (area3style <> 'Done')OR (area4style <> 'Done') ORDER BY addtime";
             SqlDataReader dr = s.ExecuteReader(sql);
             if (dr.HasRows)
@@ -72,7 +73,7 @@ namespace ERPPlugIn.CrushedMaterialManager
         public List<CrushedMaterialDetail> getAllCrushedMaterial(string area, string status)
         {
             List<CrushedMaterialDetail> cList = new List<CrushedMaterialDetail>();
-            SelectCommandBuilder s = new SelectCommandBuilder(constr, "trymolde");
+            SelectCommandBuilder s = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
             string sql = "SELECT id, 品番, 材料, 材料编号, 模具担当, addtime, area1style, area2style, area3style, area4style FROM trymolde WHERE (PO处理 = '粉碎') AND (isApprove = 'OK') AND (area" + area + "style = '" + status + "') ORDER BY addtime";
             SqlDataReader dr = s.ExecuteReader(sql);
             if (dr.HasRows)
@@ -188,7 +189,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                 }
                 for (int i = 0; i < cmList.Count; i++)
                 {
-                    UpdateCommandBuilder up = new UpdateCommandBuilder(constr, "trymolde");
+                    UpdateCommandBuilder up = new UpdateCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
                     string status = "";
                     switch (ViewState["area"].ToString())
                     {
@@ -219,7 +220,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                         return;
                     }
                 }
-                InsertCommandBuilder ins = new InsertCommandBuilder(constr, "trymolde");
+                InsertCommandBuilder ins = new InsertCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
                 int count = ins.ExcutTransaction(sqlList);
                 if (count != 0)
                 {
@@ -273,7 +274,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                 }
                 for (int i = 0; i < cmList.Count; i++)
                 {
-                    UpdateCommandBuilder up = new UpdateCommandBuilder(constr, "trymolde");
+                    UpdateCommandBuilder up = new UpdateCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
                     string status = "";
                     switch (ViewState["area"].ToString())
                     {
@@ -308,7 +309,7 @@ namespace ERPPlugIn.CrushedMaterialManager
                         return;
                     }
                 }
-                InsertCommandBuilder ins = new InsertCommandBuilder(constr, "trymolde");
+                InsertCommandBuilder ins = new InsertCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "trymolde");
                 int count = ins.ExcutTransaction(sqlList);
                 if (count != 0)
                 {

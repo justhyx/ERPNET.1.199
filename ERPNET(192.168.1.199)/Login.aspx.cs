@@ -17,10 +17,9 @@ namespace ERPPlugIn
 {
     public partial class Login : System.Web.UI.Page
     {
-        string con = "Data Source=192.168.1.7;Initial Catalog=hudsonwwwroot;User ID=sa";
         protected void Page_Load(object sender, EventArgs e)
         {
-             
+
 
             if (!Page.IsPostBack)
             {
@@ -55,7 +54,7 @@ namespace ERPPlugIn
                     txtPassWords.Focus();
                     return;
                 }
-                SelectCommandBuilder s = new SelectCommandBuilder(con, "HUDSON_User");
+                SelectCommandBuilder s = new SelectCommandBuilder(ConnectionFactory.ConnectionString_hudsonwwwroot, "HUDSON_User");
                 string sqluser = "select count(UserID) from HUDSON_User where UserID = '" + txtUserName.Text.Trim() + "'";
                 Debug.WriteLine(sqluser);
                 int count = Convert.ToInt32(s.ExecuteScalar(sqluser));
@@ -80,8 +79,8 @@ namespace ERPPlugIn
                     txtPassWords.Focus();
                     return;
                 }
-                
-               
+
+
                 //Hashtable h = (Hashtable)Application["online"];
                 //string oldsessionid = null;
                 //if (h != null)
@@ -154,8 +153,8 @@ namespace ERPPlugIn
                 lblResult.Text = ex.Message;
                 lblResult.ForeColor = Color.Red;
                 throw;
-                
-                
+
+
             }
 
         }
