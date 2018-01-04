@@ -1,0 +1,7 @@
+F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\bin\ERPPlugIn.dll
+F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\bin\ERPPlugIn.pdb
+F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\obj\Release\ERPPlugIn.dll
+F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\obj\Release\ERPPlugIn.pdb
+F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\obj\Release\ERPNET(192.168.1.199).csprojResolveAssemblyReference.cache
+F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\bin\DBCommandDAL.dll
+F:\CodeRepes\ERPNET.1.199\ERPNET(192.168.1.199)\bin\NPOI.dll
