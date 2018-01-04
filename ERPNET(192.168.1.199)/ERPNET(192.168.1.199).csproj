@@ -63,6 +63,19 @@
     <Reference Include="System.Web.ApplicationServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\ui-icons_444444_256x240.png" />
+    <Content Include="Content\images\ui-icons_555555_256x240.png" />
+    <Content Include="Content\images\ui-icons_777620_256x240.png" />
+    <Content Include="Content\images\ui-icons_777777_256x240.png" />
+    <Content Include="Content\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Content\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Content\jquery-ui.css" />
+    <Content Include="Content\jquery-ui.structure.css" />
+    <Content Include="Content\jquery-ui.theme.css" />
     <Content Include="CrushedMaterialManager\CrushedMaterial_Approved.aspx" />
     <Content Include="CrushedMaterialManager\CrushedMaterial_List.aspx" />
     <Content Include="CrushedMaterialManager\delete.aspx" />
@@ -82,6 +95,7 @@
     <Content Include="css\templatemo_style.css" />
     <Content Include="Equip\equip_detail.aspx" />
     <Content Include="Equip\IndexEquipState.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="GoodsManager\Goods_AddNew.aspx" />
     <Content Include="GoodsManager\Goods_Aprove.aspx" />
@@ -499,7 +513,14 @@
     <Content Include="PDAHomePage.htm" />
     <Content Include="p\2d1f_c.aspx" />
     <Content Include="right.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-3.2.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
     <Content Include="Scripts\jquery-ui.js" />
     <Content Include="StockInManager\StockIn_AddData.aspx" />
     <Content Include="StockInManager\StockIn_AddDictateData.aspx" />
@@ -1219,9 +1240,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CrushedMaterialManager\ServerData.ashx" />
+    <None Include="Content\bootstrap-theme.css.map" />
+    <None Include="Content\bootstrap-theme.min.css.map" />
+    <None Include="Content\bootstrap.css.map" />
+    <None Include="Content\bootstrap.min.css.map" />
     <None Include="DownLoadFile\Engineering_inspection_sheet.xls" />
     <None Include="DownLoadFile\部品上传模板.xls" />
     <Content Include="GoodsManager\GoodsData.ashx" />
+    <None Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="fonts\glyphicons-halflings-regular.woff" />
+    <None Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="Goods_Ito\Create.xls" />
     <None Include="Images\qqface\Desktop_2.ini" />
     <None Include="Images\qqface\_desktop.ini" />
@@ -1269,6 +1298,9 @@
     <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\Release\ERPPlugIn.csprojResolveAssemblyReference.cache" />
     <Content Include="StockInManager\StockIn_GoodsData.ashx" />
+    <Content Include="packages.config" />
+    <None Include="Scripts\jquery-3.2.1.min.map" />
+    <None Include="Scripts\jquery-3.2.1.slim.min.map" />
     <None Include="StockManager\Create.xls" />
     <None Include="UploadExcel\Book1.xls" />
     <None Include="UploadExcel\Book2.xls" />

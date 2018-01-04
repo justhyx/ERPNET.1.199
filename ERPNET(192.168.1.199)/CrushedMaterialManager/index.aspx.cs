@@ -198,7 +198,7 @@ namespace ERPPlugIn.CrushedMaterialManager
             {
                 moneySum = Convert.ToDouble(cmd.ExecuteScalar(sqlmoney1));
             }
-            LabelMoney.Text = string.Format("总金额:{0}", moneySum);
+            lblMoney.InnerText = string.Format("总金额:{0}", moneySum);
 
             getRoot(inputArea);
 
@@ -269,7 +269,7 @@ namespace ERPPlugIn.CrushedMaterialManager
             {
                 moneySum = Convert.ToDouble(cmd.ExecuteScalar(sqlmoney1));
             }
-            LabelMoney.Text = string.Format("总金额:{0}", moneySum);
+            lblMoney.InnerText = string.Format("总金额:{0}", moneySum);
 
             getRoot(inputArea);
             //在切换不同录入来源的表的时经理和总经理按钮权限的控制
@@ -461,19 +461,19 @@ namespace ERPPlugIn.CrushedMaterialManager
 
                 client.Send(mail);
                 LabelMsg.Text = "发送邮件成功";
-                LabelMsg.ForeColor = Color.Green;
+                LabelMsg.CssClass = "btn btn-success";
             }
             catch (Exception ex)
             {
                 LabelMsg.Text = "发送邮件失败，失败原因:" + ex.Message;
-                LabelMsg.ForeColor = Color.Red;
+                LabelMsg.CssClass = "btn btn-danger";
             }
         }
         protected void Button4_Click(object sender, EventArgs e)
         {
             string managerConfirm = "managerConfirm";
             //获取页面所传过来的金额
-            string[] money = (LabelMoney.Text).Split(':');
+            string[] money = (lblMoney.InnerText).Split(':');
             double moneySum = Convert.ToDouble(money[1]);
             string inputArea = getInputArea();
             string timeNow = DateTime.Now.ToString("d");
