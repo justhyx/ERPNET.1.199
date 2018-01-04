@@ -33,14 +33,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DBCommandDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\DBCommandDAL.dll</HintPath>
+    <Reference Include="DBCommandDAL">
+      <HintPath>importdll\DBCommandDAL.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.LabelManager2">
+      <HintPath>importdll\Interop.LabelManager2.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\NPOI.dll</HintPath>
+    <Reference Include="NPOI">
+      <HintPath>importdll\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -398,6 +400,9 @@
     <Content Include="Images\top_table_leftbg.gif" />
     <Content Include="Images\Upload.gif" />
     <Content Include="Images\_notes\dwsync.xml" />
+    <EmbeddedResource Include="importdll\DBCommandDAL.dll" />
+    <EmbeddedResource Include="importdll\Interop.LabelManager2.dll" />
+    <EmbeddedResource Include="importdll\NPOI.dll" />
     <Content Include="Index.aspx" />
     <Content Include="InventoryManager\Inventory_Begin.aspx" />
     <Content Include="InventoryManager\Inventory_Confirm.aspx" />
